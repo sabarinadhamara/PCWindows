@@ -1,0 +1,66 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PCWINDOWS.UConverter.Temp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid VerticalAlignment="Top"  Height="60" Background="#F5F5F5">
+            <TextBlock x:Name="Header" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="28" TextWrapping="Wrap" Text="Temparature"  Width="480" Margin="0,16,0,1" FontFamily="Optima Regular" Height="43" Foreground="Black"/>
+        </Grid>
+        <ScrollViewer>
+            <Grid Margin="0,60,0,0" Background="White">
+                <StackPanel>
+
+                    <toolkit:PhoneTextBox x:Name="temparature" Hint="Enter Value" InputScope="Number" AcceptsReturn="True" Background="White" />
+
+                    <Border  CornerRadius="10" Margin="150,10,20,0" Padding="2"  >
+                        <toolkit:ListPicker Name="temppicker" ExpansionMode="ExpansionAllowed"  SelectionChanged="Selection_Changed" Background="#F5F5F5" Margin="0,0,0,0"  />
+                    </Border>
+
+                    <Grid Margin="5,70,5,0">
+                        <Border BorderThickness="15" BorderBrush="Pink" CornerRadius="2">
+                            <Grid Background="Pink" >
+                                <StackPanel Orientation="Vertical" Margin="5,5,5,5">
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Celsius          :    "/>
+                                        <TextBlock Name="cels"/>
+                                    </StackPanel>
+                                    <Line Stroke="White" StrokeThickness="1" X1="0" X2="430" Margin="0,5,0,0"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Farenheit      :    "/>
+                                        <TextBlock Name="faren"/>
+                                    </StackPanel>
+                                    <Line Stroke="White" StrokeThickness="1" X1="0" X2="430" Margin="0,5,0,0"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Rankine        :   "/>
+                                        <TextBlock Name="rank" />
+                                    </StackPanel>
+                                    <Line Stroke="White" StrokeThickness="1" X1="0" X2="430" Margin="0,5,0,0"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Kelvin           :    "/>
+                                        <TextBlock Name="kelv"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+        <Image Source="Images/1.png" Height="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Opacity="0.5"/>
+
+    </Grid>
+</phone:PhoneApplicationPage>

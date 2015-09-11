@@ -1,0 +1,99 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PCWINDOWS.UConverter.ConcentrationUnits"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"   
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid VerticalAlignment="Top"  Height="60" Background="#F5F5F5">
+            <TextBlock x:Name="Header" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="28" TextWrapping="Wrap" Text="Concentration Units"  Width="480" Margin="0,16,0,1" FontFamily="Optima Regular" Height="43" Foreground="Black"/>
+        </Grid>
+        <ScrollViewer>
+            <Grid Margin="0,60,0,0" Background="White">
+                <StackPanel>
+
+                    <Border  CornerRadius="10" Margin="20,10,20,0" Padding="2"  >
+                        <toolkit:ListPicker Name="areapicker" ExpansionMode="ExpansionAllowed"   Background="#F5F5F5" Margin="0,0,0,0"  />
+                    </Border>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Mol/Wt% :  " Foreground="Black" VerticalAlignment="Center" Margin="20"/>
+                        <TextBox x:Name="amount"  InputScope="Number" AcceptsReturn="True" Background="White" Width="150" />
+                        <Button x:Name="Add" Margin="50,0,0,0" Content="Add" Foreground="SkyBlue" Background="#F8F8F8" BorderBrush="#F8F8F8" BorderThickness="2" Click="Add_Click"/>
+                    </StackPanel>
+
+
+                    <Grid Margin="5,20,5,0">
+                        <Border BorderThickness="15" BorderBrush="Pink" CornerRadius="2">
+                            <Grid Background="Pink" >
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Total %  :  "/>
+                                    <TextBlock Name="total" />
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <StackPanel Margin="0,20" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Border x:Name="molborder" BorderBrush="SkyBlue" BorderThickness="1"   CornerRadius="5,0,0,5" HorizontalAlignment="Left" Height="39" Margin="0,6,0,0" VerticalAlignment="Top" Width="159">
+                            <TextBlock x:Name="wttomol" TextAlignment="Center" TextWrapping="Wrap" Text="Wt% to Mol%" Foreground="Black" HorizontalAlignment="Right" Width="159"  Margin="-1,0" FontFamily="Optima Regular" Padding="5,7,0,0" FontSize="18"  Tap="taponsegmentcontrol"/>
+                        </Border>
+
+                        <Border x:Name="wtborder" BorderBrush="SkyBlue" BorderThickness="1" CornerRadius="0,05,05,0" HorizontalAlignment="Left" Height="39"  VerticalAlignment="Top" Width="160" Margin="0,6,0,0">
+                            <TextBlock x:Name="moltowt" Foreground="Black" TextWrapping="Wrap" Text="Mol% to Wt%" TextAlignment="Center" HorizontalAlignment="Right" Width="155"  Margin="-1,1,4,-2" Padding="0,9,0,0" FontFamily="Optima Regular" FontSize="18" Tap="taponsegmentcontrol" />
+                        </Border>
+                    </StackPanel>
+
+                    <Grid Margin="5,30,5,0">
+                        <Border BorderThickness="15" BorderBrush="Pink" CornerRadius="2">
+                            <Grid Background="Pink" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Component"/>
+                                    <TextBlock Grid.Row="0" Grid.Column="1" Text="Mol.perct%"/>
+                                <TextBlock Grid.Row="0" Grid.Column="2" Text="Weight.Perct%"/>
+                                <TextBlock Grid.Row="1" Grid.Column="1" Text="Mol.perct%"/>
+                                <TextBlock Grid.Row="1" Grid.Column="2" Text="Weight.Perct%"/>
+                                <TextBlock Grid.Row="2" Grid.Column="1" Text="Mol.perct%"/>
+                                <TextBlock Grid.Row="2" Grid.Column="2" Text="Weight.Perct%"/>
+                                <TextBlock Grid.Row="3" Grid.Column="1" Text="Mol.perct%"/>
+                                <TextBlock Grid.Row="3" Grid.Column="2" Text="Weight.Perct%"/>
+                                <TextBlock Grid.Row="4" Grid.Column="1" Text="Mol.perct%"/>
+                                <TextBlock Grid.Row="4" Grid.Column="2" Text="Weight.Perct%"/>
+                                <TextBlock Grid.Row="5" Grid.Column="1" Text="Mol.perct%"/>
+                                <TextBlock Grid.Row="5" Grid.Column="2" Text="Weight.Perct%"/>
+
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                    <Button x:Name="calculate" BorderBrush="#F8F8F8" BorderThickness="2" Foreground="Black" Content="Calculate" Background="#F8F8F8 " Margin="100,50" Click="calculate_Click" />
+                       
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+        <Image Source="Images/1.png" Height="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Opacity="0.5"/>
+        
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,74 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PCWINDOWS.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" >
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/mainbg.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="245*"/>
+            <ColumnDefinition Width="246*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="UnitConverter" Grid.Row="0" Grid.Column="0" Background="Purple" VerticalAlignment="Top"  Margin="-12,1,0,0" Click="UnitConverter_Click" BorderThickness="0" Height="150"  >
+            <StackPanel Orientation="Horizontal" >
+                <Image Source="Images/1.png" Margin="0,0,0,0" Height="85" Width="69" />
+                <StackPanel Margin="0,30,0,0">
+                    <TextBlock Text="Unit"   Foreground="White" FontSize="20"/>
+                    <TextBlock Text="Converter" Foreground="White" Height="50" Width="94" FontSize="20" />
+                </StackPanel>
+                <Image Source="Images/arrow.png" Height="20" Width="10" Margin="0,90,0,0"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="EquipmentSizing" Grid.Row="0" Background="Green" HorizontalAlignment="Right" VerticalAlignment="Top" Height="150" Width="252" Margin="0,1,-12,0" Grid.Column="1" BorderThickness="0" Click="EquipmentSizing_Click" >
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Images/3sg.png" Height="85" Width="69" />
+                <StackPanel Margin="0,30,0,0">
+                    <TextBlock Text="Equipment" Foreground="White" FontSize="20" />
+                    <TextBlock Text="Sizing" Height="50" Width="94" Foreground="White" FontSize="20" />
+                </StackPanel>
+                <Image Source="Images/arrow.png" Height="20" Width="10" Margin="0,90,0,0"/>
+            </StackPanel>
+
+        </Button>
+
+        <Button x:Name="ComponentProperties" Grid.Row="0" Grid.Column="0" Background="Blue"  HorizontalAlignment="Left" Margin="-12,142,0,476" Height="150" Width="252" BorderThickness="0" Click="ComponentProperties_Click" >
+            <StackPanel Orientation="Horizontal" Width="205">
+                <Image Source="Images/3.png" Height="85" Width="62" />
+                <StackPanel Margin="0,30,0,0">
+                    <TextBlock Text="Component"  Foreground="White" FontSize="20"/>
+                    <TextBlock Text="Properties" Height="50" Width="94" Foreground="White" FontSize="20" HorizontalAlignment="Left"/>
+                </StackPanel>
+                <Image Source="Images/arrow.png" Height="20" Width="10" Margin="0,90,0,0"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="MixtureProperties" Grid.Row="0" Background="Brown"  HorizontalAlignment="Right" Margin="0,142,-12,476" Height="150" Width="252" BorderThickness="0" Grid.Column="1" Click="MixtureProperties_Click" >
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Images/4s.png" Height="85" Width="60" />
+                <StackPanel Margin="0,30,0,0">
+                    <TextBlock Text="Mixture" Foreground="White" FontSize="20" />
+                    <TextBlock Text="Properties" Height="50" Width="94" Foreground="White" FontSize="20"/>
+                </StackPanel>
+                <Image Source="Images/arrow.png" Height="20" Width="10" Margin="0,90,0,0"/>
+            </StackPanel>
+        </Button>
+
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

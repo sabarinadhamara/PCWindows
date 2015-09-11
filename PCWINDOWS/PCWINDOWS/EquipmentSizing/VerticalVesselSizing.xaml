@@ -1,0 +1,48 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PCWINDOWS.EquipmentSizing.VerticalVesselSizing"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"   
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid VerticalAlignment="Top"  Height="60" Background="#F5F5F5">
+            <TextBlock x:Name="Header" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="28" TextWrapping="Wrap" Text="Vertical Vessel Sizing"  Width="480" Margin="0,16,0,1" FontFamily="Optima Regular"  Height="43" Foreground="Black"/>
+        </Grid>
+        <ScrollViewer>
+            <Grid Margin="0,60,0,0" >
+                <Grid>
+                <Grid Margin="30,30,30,30">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="500"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Height(mm):" HorizontalAlignment="Center" VerticalAlignment="Center"  Height="27" Width="110" Margin="50,24,50,23"/>
+                    <toolkit:PhoneTextBox Grid.Column="1" Height="60" Width="150" HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Diameter(mm):" HorizontalAlignment="Center" VerticalAlignment="Center"  Height="27" Width="132" Margin="39,29,39,28"/>
+                    <toolkit:PhoneTextBox Grid.Row="1" Grid.Column="1" Height="60" Width="150" HorizontalAlignment="Left"/>
+                        </Grid>
+                    <Button  Content="Calculate" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="158,190,178,0"/>
+                </Grid>
+                
+                
+            </Grid>
+        </ScrollViewer>
+        <Image Source="Images/3sg.png" Height="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Opacity="0.5"/>
+    </Grid>
+</phone:PhoneApplicationPage>

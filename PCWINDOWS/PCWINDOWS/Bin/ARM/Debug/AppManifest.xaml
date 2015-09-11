@@ -1,0 +1,13 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="PCWINDOWS" EntryPointType="PCWINDOWS.App" RuntimeVersion="6.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="PCWINDOWS" Source="PCWINDOWS.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Maps" Source="Microsoft.Phone.Controls.Maps.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="Mono.Data.Sqlite" Source="Mono.Data.Sqlite.dll" />
+    <AssemblyPart x:Name="System.Data.Portable" Source="System.Data.Portable.dll" />
+    <AssemblyPart x:Name="System.Transactions.Portable" Source="System.Transactions.Portable.dll" />
+    <AssemblyPart x:Name="Sqlite" Source="Sqlite.dll" />
+    <AssemblyPart x:Name="MonoDataSqliteWrapper" Source="MonoDataSqliteWrapper.dll" />
+  </Deployment.Parts>
+</Deployment>

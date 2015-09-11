@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\build\wp8\Mono.Data.Sqlite.Portable.props" Condition="Exists('..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\build\wp8\Mono.Data.Sqlite.Portable.props')" />
+  <Import Project="..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.props" Condition="Exists('..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{04B0C600-6959-4633-937A-FE794CF06BFD}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PCWINDOWS</RootNamespace>
+    <AssemblyName>PCWINDOWS</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>PCWINDOWS_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>PCWINDOWS.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <NuGetPackageImportStamp>66df9092</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;USE_WP8_NATIVE_SQLITE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;USE_WP8_NATIVE_SQLITE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;USE_WP8_NATIVE_SQLITE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentProperties\Class1.cs" />
+    <Compile Include="ComponentProperties\Interface.xaml.cs">
+      <DependentUpon>Interface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentProperties\LatentHeat.xaml.cs">
+      <DependentUpon>LatentHeat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentProperties\MolecularWeight.xaml.cs">
+      <DependentUpon>MolecularWeight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentProperties\VapourPressure.xaml.cs">
+      <DependentUpon>VapourPressure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MixtureProperties\Interface.xaml.cs">
+      <DependentUpon>Interface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SQLite.cs" />
+    <Compile Include="SQLiteAsync.cs" />
+    <Compile Include="UConverter\Area.xaml.cs">
+      <DependentUpon>Area.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentSizing\Interface.xaml.cs">
+      <DependentUpon>Interface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentSizing\VerticalVesselSizing.xaml.cs">
+      <DependentUpon>VerticalVesselSizing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UC.xaml.cs">
+      <DependentUpon>UC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\ConcentrationUnits.xaml.cs">
+      <DependentUpon>ConcentrationUnits.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\Density.xaml.cs">
+      <DependentUpon>Density.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\Energy.xaml.cs">
+      <DependentUpon>Energy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\HeatTransferCoefficient.xaml.cs">
+      <DependentUpon>HeatTransferCoefficient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\Interface.xaml.cs">
+      <DependentUpon>Interface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\Mass.xaml.cs">
+      <DependentUpon>Mass.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\Power.xaml.cs">
+      <DependentUpon>Power.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\Pressure.xaml.cs">
+      <DependentUpon>Pressure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\SpecificHeat.xaml.cs">
+      <DependentUpon>SpecificHeat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\Temp.xaml.cs">
+      <DependentUpon>Temp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\ThermalConductivity.xaml.cs">
+      <DependentUpon>ThermalConductivity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\Velocity.xaml.cs">
+      <DependentUpon>Velocity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\Viscosity.xaml.cs">
+      <DependentUpon>Viscosity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\Volume.xaml.cs">
+      <DependentUpon>Volume.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UConverter\VolumeRateToMassRate.xaml.cs">
+      <DependentUpon>VolumeRateToMassRate.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="ComponentProperties\Interface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentProperties\LatentHeat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentProperties\MolecularWeight.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentProperties\VapourPressure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MixtureProperties\Interface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\Area.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentSizing\Interface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentSizing\VerticalVesselSizing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\ConcentrationUnits.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\Density.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\Energy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\HeatTransferCoefficient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\Interface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\Mass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\Power.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\Pressure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\SpecificHeat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\Temp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\ThermalConductivity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\Velocity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\Viscosity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\Volume.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UConverter\VolumeRateToMassRate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="Assets\SplashScreen.png" />
+    <Content Include="chemicalnames2.csv" />
+    <Content Include="Images\Splash.png" />
+    <Content Include="mydata3.csv" />
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <Content Include="phydata.sqlite" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Images\icon4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\BadgeLogo.png" />
+    <Content Include="Assets\icon4.png" />
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\Splash.png" />
+    <Content Include="Assets\SplashScreen1.png" />
+    <Content Include="Assets\SquareTile150x150.png" />
+    <Content Include="Assets\SquareTile71x71.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\WideLogo.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1.png" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\3sg.png" />
+    <Content Include="Images\4s.png" />
+    <Content Include="Images\arrow.png" />
+    <Content Include="Images\bg.png" />
+    <Content Include="Images\ios_back_button.png" />
+    <Content Include="Images\iPhoneSplash.png" />
+    <Content Include="Images\mainbg.png" />
+    <Content Include="Images\Screen.png" />
+    <Content Include="README_FIRST.txt" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Maps, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Portable, Version=4.0.0.0, Culture=neutral, PublicKeyToken=59e704a76bc4613a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\lib\wp8\System.Data.Portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions.Portable, Version=4.0.0.0, Culture=neutral, PublicKeyToken=59e704a76bc4613a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\lib\wp8\System.Transactions.Portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="SQLite.WP80, Version=3.8.11.1">
+      <Name>SQLite for Windows Phone %28SQLite.WP80, Version=3.8.11.1%29</Name>
+    </SDKReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.props'))" />
+    <Error Condition="!Exists('..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.targets'))" />
+    <Error Condition="!Exists('..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\build\wp8\Mono.Data.Sqlite.Portable.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\build\wp8\Mono.Data.Sqlite.Portable.props'))" />
+  </Target>
+  <Import Project="..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.targets" Condition="Exists('..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.targets')" />
+  <Import Project="..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets" Condition="Exists('..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets')" />
+  <Target Name="EnsureMonoDataSqlitePortableImported" BeforeTargets="BeforeBuild" Condition="'$(MonoDataSqlitePortableImported)' == ''">
+    <Error Condition="!Exists('..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them." />
+    <Error Condition="Exists('..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build." />
+  </Target>
+</Project>
