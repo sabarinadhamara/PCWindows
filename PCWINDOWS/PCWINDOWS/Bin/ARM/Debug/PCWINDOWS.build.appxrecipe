@@ -202,14 +202,29 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\SQLite.WP80\3.8.11.1\Redist\Debug\ARM\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\chemicalnames2.csv">
-      <PackagePath>chemicalnames2.csv</PackagePath>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\arrow.png">
+      <PackagePath>arrow.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\mydata3.csv">
-      <PackagePath>mydata3.csv</PackagePath>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\icon4.png">
+      <PackagePath>icon4.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\Splash.png">
-      <PackagePath>Images\Splash.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\3sg.png">
+      <PackagePath>Images\3sg.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\cart_black.png">
+      <PackagePath>Images\cart_black.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\Lock.png">
+      <PackagePath>Images\Lock.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\purchase.png">
+      <PackagePath>Images\purchase.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\share.png">
+      <PackagePath>Images\share.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\tick_green.png">
+      <PackagePath>Images\tick_green.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\icon4.png">
       <PackagePath>Images\icon4.png</PackagePath>
@@ -272,29 +287,14 @@
     <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\3.png">
       <PackagePath>Images\3.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\3sg.png">
-      <PackagePath>Images\3sg.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\4s.png">
       <PackagePath>Images\4s.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\arrow.png">
       <PackagePath>Images\arrow.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\bg.png">
-      <PackagePath>Images\bg.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\ios_back_button.png">
-      <PackagePath>Images\ios_back_button.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\iPhoneSplash.png">
-      <PackagePath>Images\iPhoneSplash.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\mainbg.png">
       <PackagePath>Images\mainbg.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\Screen.png">
-      <PackagePath>Images\Screen.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Toolkit.Content\ApplicationBar.Add.png">
       <PackagePath>Toolkit.Content\ApplicationBar.Add.png</PackagePath>
@@ -311,8 +311,26 @@
     <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Toolkit.Content\ApplicationBar.Select.png">
       <PackagePath>Toolkit.Content\ApplicationBar.Select.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Logo170X170.jpg">
+      <PackagePath>Logo170X170.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Logo360X360.jpg">
+      <PackagePath>Logo360X360.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\SplashScreenImage.jpg">
+      <PackagePath>SplashScreenImage.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Tilewide.jpg">
+      <PackagePath>Tilewide.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\VAPDATA2.sqlite">
+      <PackagePath>VAPDATA2.sqlite</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\phydata.sqlite">
       <PackagePath>phydata.sqlite</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\mydata3.csv">
+      <PackagePath>mydata3.csv</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\README_FIRST.txt">
       <PackagePath>README_FIRST.txt</PackagePath>

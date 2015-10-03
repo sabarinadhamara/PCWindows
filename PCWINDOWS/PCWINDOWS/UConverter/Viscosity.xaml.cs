@@ -30,6 +30,11 @@ namespace PCWINDOWS.UConverter
 
         private void Selection_Changed(object sender, SelectionChangedEventArgs e)
         {
+            Loaddata();
+        }
+
+        private void Loaddata()
+        {
             if (viscositypicker.SelectedIndex == 0)
             {
                 cp.Text = "";
@@ -47,7 +52,7 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double c = int.Parse(viscosity.Text);
-                    double pa =c/1000 ;
+                    double pa = c / 1000;
                     cp.Text = c.ToString();
                     pas.Text = pa.ToString();
                     cst.Text = "";
@@ -103,6 +108,11 @@ namespace PCWINDOWS.UConverter
                 }
             }
 
+        }
+
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Loaddata();
         }
 
     }

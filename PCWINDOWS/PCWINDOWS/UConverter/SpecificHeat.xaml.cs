@@ -30,6 +30,11 @@ namespace PCWINDOWS.UConverter
 
         private void Selection_Changed(object sender, SelectionChangedEventArgs e)
         {
+            Loaddata();
+        }
+
+        private void Loaddata()
+        {
             if (specificheatpicker.SelectedIndex == 0)
             {
                 kwkg.Text = "";
@@ -47,8 +52,8 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double kwk = int.Parse(specificheat.Text);
-                    double bbm = kwk*859.85;
-                    double kck = kwk*860.42;
+                    double bbm = kwk * 859.85;
+                    double kck = kwk * 860.42;
                     double jg = kwk * 3600.00;
                     kwkg.Text = kwk.ToString();
                     btubm.Text = bbm.ToString();
@@ -110,7 +115,11 @@ namespace PCWINDOWS.UConverter
                     jgk.Text = jg.ToString();
                 }
             }
+        }
 
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Loaddata();
         }
     }
 }

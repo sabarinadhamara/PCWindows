@@ -29,6 +29,11 @@ namespace PCWINDOWS.UConverter
         }
         private void Selection_Changed(object sender, SelectionChangedEventArgs e)
         {
+            Loaddata();
+        }
+
+        private void Loaddata()
+        {
             if (temppicker.SelectedIndex == 0)
             {
                 cels.Text = "";
@@ -45,8 +50,8 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double ce=int.Parse(temparature.Text);
-                    double fh = (ce * 1.8000 )+ 32.00;
+                    double ce = int.Parse(temparature.Text);
+                    double fh = (ce * 1.8000) + 32.00;
                     double ra = (ce * 1.8000) + 491.67;
                     double kel = ce + 273.15;
                     cels.Text = ce.ToString();
@@ -65,7 +70,7 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double fh = int.Parse(temparature.Text);
-                    double ce = (fh - 32.00)/(1.800);
+                    double ce = (fh - 32.00) / (1.800);
                     double ra = (ce * 1.8000) + 491.67;
                     double kel = ce + 273.15;
                     cels.Text = ce.ToString();
@@ -84,7 +89,7 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double ra = int.Parse(temparature.Text);
-                    double ce = (ra- 491.67)/(1.800);
+                    double ce = (ra - 491.67) / (1.800);
                     double fh = (ce * 1.8000) + 32.00;
                     double kel = ce + 273.15;
                     cels.Text = ce.ToString();
@@ -112,6 +117,11 @@ namespace PCWINDOWS.UConverter
                     kelv.Text = kel.ToString();
                 }
             }
+        }
+
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Loaddata();
         }
     }
 }

@@ -97,21 +97,104 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ComponentProperties\Class1.cs" />
+    <Compile Include="ComponentProperties\BoilingPoint.xaml.cs">
+      <DependentUpon>BoilingPoint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentProperties\CriticalTemparature.xaml.cs">
+      <DependentUpon>CriticalTemparature.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentProperties\GasVapourDensity.xaml.cs">
+      <DependentUpon>GasVapourDensity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentProperties\GibbsFreeEnergy.xaml.cs">
+      <DependentUpon>GibbsFreeEnergy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentProperties\HeatofFormation.xaml.cs">
+      <DependentUpon>HeatofFormation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ComponentProperties\Interface.xaml.cs">
       <DependentUpon>Interface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentProperties\KCalc.xaml.cs">
+      <DependentUpon>KCalc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentProperties\KValue.xaml.cs">
+      <DependentUpon>KValue.xaml</DependentUpon>
     </Compile>
     <Compile Include="ComponentProperties\LatentHeat.xaml.cs">
       <DependentUpon>LatentHeat.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ComponentProperties\LiquidDensity.xaml.cs">
+      <DependentUpon>LiquidDensity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentProperties\LiquidSpecificHeat.xaml.cs">
+      <DependentUpon>LiquidSpecificHeat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentProperties\LiquidThermalConductivity.xaml.cs">
+      <DependentUpon>LiquidThermalConductivity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentProperties\LiquidViscosity.xaml.cs">
+      <DependentUpon>LiquidViscosity.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ComponentProperties\MolecularWeight.xaml.cs">
       <DependentUpon>MolecularWeight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentProperties\VaporThermalConductivity.xaml.cs">
+      <DependentUpon>VaporThermalConductivity.xaml</DependentUpon>
     </Compile>
     <Compile Include="ComponentProperties\VapourPressure.xaml.cs">
       <DependentUpon>VapourPressure.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ComponentProperties\VapourSpecificHeat.xaml.cs">
+      <DependentUpon>VapourSpecificHeat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentSizing\Agitator.xaml.cs">
+      <DependentUpon>Agitator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentSizing\Compressor.xaml.cs">
+      <DependentUpon>Compressor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentSizing\FanPower.xaml.cs">
+      <DependentUpon>FanPower.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentSizing\GasControlValveSizing.xaml.cs">
+      <DependentUpon>GasControlValveSizing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentSizing\GasPipeSizing.xaml.cs">
+      <DependentUpon>GasPipeSizing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentSizing\LiquidControlValveSizing.xaml.cs">
+      <DependentUpon>LiquidControlValveSizing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentSizing\NozzleSizing.xaml.cs">
+      <DependentUpon>NozzleSizing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentSizing\PipesforLiquid.xaml.cs">
+      <DependentUpon>PipesforLiquid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentSizing\Pump.xaml.cs">
+      <DependentUpon>Pump.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentSizing\VesselPlateThickness.xaml.cs">
+      <DependentUpon>VesselPlateThickness.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MixtureProperties\BubblePressure.xaml.cs">
+      <DependentUpon>BubblePressure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MixtureProperties\DewPressure.xaml.cs">
+      <DependentUpon>DewPressure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MixtureProperties\FreezingPoint.xaml.cs">
+      <DependentUpon>FreezingPoint.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MixtureProperties\Interface.xaml.cs">
       <DependentUpon>Interface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MixtureProperties\KCpCvMixtureValue.xaml.cs">
+      <DependentUpon>KCpCvMixtureValue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase.xaml.cs">
+      <DependentUpon>Purchase.xaml</DependentUpon>
     </Compile>
     <Compile Include="SQLite.cs" />
     <Compile Include="SQLiteAsync.cs" />
@@ -187,7 +270,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="ComponentProperties\BoilingPoint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentProperties\CriticalTemparature.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentProperties\GasVapourDensity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentProperties\GibbsFreeEnergy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentProperties\HeatofFormation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ComponentProperties\Interface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentProperties\KCalc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentProperties\KValue.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -195,7 +306,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ComponentProperties\LiquidDensity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentProperties\LiquidSpecificHeat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentProperties\LiquidThermalConductivity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentProperties\LiquidViscosity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ComponentProperties\MolecularWeight.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentProperties\VaporThermalConductivity.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -203,7 +334,71 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ComponentProperties\VapourSpecificHeat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentSizing\Agitator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentSizing\Compressor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentSizing\FanPower.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentSizing\GasControlValveSizing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentSizing\GasPipeSizing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentSizing\LiquidControlValveSizing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentSizing\NozzleSizing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentSizing\PipesforLiquid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentSizing\Pump.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentSizing\VesselPlateThickness.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MixtureProperties\BubblePressure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MixtureProperties\DewPressure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MixtureProperties\FreezingPoint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MixtureProperties\Interface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MixtureProperties\KCpCvMixtureValue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Purchase.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -294,9 +489,20 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="arrow.png" />
+    <Content Include="icon4.png" />
+    <Content Include="Images\3sg.png" />
+    <Content Include="Images\cart_black.png" />
+    <Content Include="Images\Lock.png" />
+    <Content Include="Images\purchase.png" />
+    <Content Include="Images\share.png" />
+    <Content Include="Images\tick_green.png" />
+    <Content Include="Logo170X170.jpg" />
+    <Content Include="Logo360X360.jpg" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="Tilewide.jpg" />
+    <Content Include="VAPDATA2.sqlite" />
     <SplashScreen Include="Assets\SplashScreen.png" />
-    <Content Include="chemicalnames2.csv" />
-    <Content Include="Images\Splash.png" />
     <Content Include="mydata3.csv" />
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -338,14 +544,9 @@
     </Content>
     <Content Include="Images\1.png" />
     <Content Include="Images\3.png" />
-    <Content Include="Images\3sg.png" />
     <Content Include="Images\4s.png" />
     <Content Include="Images\arrow.png" />
-    <Content Include="Images\bg.png" />
-    <Content Include="Images\ios_back_button.png" />
-    <Content Include="Images\iPhoneSplash.png" />
     <Content Include="Images\mainbg.png" />
-    <Content Include="Images\Screen.png" />
     <Content Include="README_FIRST.txt" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
@@ -405,5 +606,10 @@
   <Target Name="EnsureMonoDataSqlitePortableImported" BeforeTargets="BeforeBuild" Condition="'$(MonoDataSqlitePortableImported)' == ''">
     <Error Condition="!Exists('..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them." />
     <Error Condition="Exists('..\packages\Mono.Data.Sqlite.Portable.1.0.3.5\tools\Mono.Data.Sqlite.Portable.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build." />
+  </Target>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
   </Target>
 </Project>

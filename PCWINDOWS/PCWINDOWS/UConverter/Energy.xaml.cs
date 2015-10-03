@@ -29,6 +29,11 @@ namespace PCWINDOWS.UConverter
 
         private void Selection_Changed(object sender, SelectionChangedEventArgs e)
         {
+            Loaddata();
+        }
+
+        private void Loaddata()
+        {
             if (energypicker.SelectedIndex == 0)
             {
                 joule.Text = "";
@@ -86,6 +91,11 @@ namespace PCWINDOWS.UConverter
                     btu.Text = b.ToString();
                 }
             }
+        }
+
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Loaddata();
         }
 
     }

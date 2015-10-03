@@ -28,6 +28,11 @@ namespace PCWINDOWS.UConverter
         }
         private void Selection_Changed(object sender, SelectionChangedEventArgs e)
         {
+            Loaddata();
+        }
+
+        private void Loaddata()
+        {
             if (velocitypicker.SelectedIndex == 0)
             {
                 meter.Text = "";
@@ -44,10 +49,10 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double m = int.Parse(velocity.Text);
-                    double ft =m* 3.280839895;
+                    double ft = m * 3.280839895;
                     double inc = m * 39.3700787;
-                    meter.Text =m.ToString();
-                    feet.Text =ft.ToString();
+                    meter.Text = m.ToString();
+                    feet.Text = ft.ToString();
                     inch.Text = inc.ToString();
                 }
             }
@@ -61,7 +66,7 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double ft = int.Parse(velocity.Text);
-                    double m  = ft / 3.280839895;
+                    double m = ft / 3.280839895;
                     double inc = m * 39.3700787;
                     meter.Text = m.ToString();
                     feet.Text = ft.ToString();
@@ -86,6 +91,11 @@ namespace PCWINDOWS.UConverter
                 }
             }
 
+        }
+
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Loaddata();
         }
 
     }

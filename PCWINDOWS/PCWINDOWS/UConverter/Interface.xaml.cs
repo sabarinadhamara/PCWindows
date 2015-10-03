@@ -57,6 +57,8 @@ namespace PCWINDOWS.UConverter
                   NavigationService.Navigate(new Uri("/UConverter/Velocity.xaml", UriKind.Relative));
               if (StateListBox.SelectedItem.Equals("Viscosity"))
                   NavigationService.Navigate(new Uri("/UConverter/Viscosity.xaml", UriKind.Relative));
+              if (StateListBox.SelectedItem.Equals("Pressure"))
+                  NavigationService.Navigate(new Uri("/UConverter/Pressure.xaml", UriKind.Relative));
               if (StateListBox.SelectedItem.Equals("Volume"))
                   NavigationService.Navigate(new Uri("/UConverter/Volume.xaml", UriKind.Relative));
               if (StateListBox.SelectedItem.Equals("Thermal Conductivity"))

@@ -7,6 +7,8 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Microsoft.Phone.Tasks;
+using System.Threading;
 using PCWINDOWS.Resources;
 
 namespace PCWINDOWS
@@ -16,12 +18,11 @@ namespace PCWINDOWS
         // Constructor
         public MainPage()
         {
-            InitializeComponent();
-
+            Thread.Sleep(1000);
+            InitializeComponent();            
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
-
         private void UnitConverter_Click(object sender, RoutedEventArgs e)
         {
             ((PhoneApplicationFrame)Application.Current.RootVisual).Navigate(new Uri("/UConverter/Interface.xaml", UriKind.Relative));
@@ -29,7 +30,7 @@ namespace PCWINDOWS
 
         private void EquipmentSizing_Click(object sender, RoutedEventArgs e)
         {
-           ((PhoneApplicationFrame)Application.Current.RootVisual).Navigate(new Uri("/EquipmentSizing/Interface.xaml", UriKind.Relative));
+            ((PhoneApplicationFrame)Application.Current.RootVisual).Navigate(new Uri("/EquipmentSizing/Interface.xaml", UriKind.Relative));
         }
 
         private void MixtureProperties_Click(object sender, RoutedEventArgs e)
@@ -41,6 +42,22 @@ namespace PCWINDOWS
         {
             ((PhoneApplicationFrame)Application.Current.RootVisual).Navigate(new Uri("/ComponentProperties/Interface.xaml", UriKind.Relative));
         }
+
+        private void share_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            ShareStatusTask share = new ShareStatusTask();
+            share.Status = "Mandi Trades Windows Phone App http://www.windowsphone.com/en-in/store/app/manditrades/ad7cbabe-32f3-4062-a8ae-61bf5231f6b3";
+            share.Show();
+        }
+
+        private void settings_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            ((PhoneApplicationFrame)Application.Current.RootVisual).Navigate(new Uri("/Purchase.xaml", UriKind.Relative));
+        }
+
+       
+
+       
 
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()

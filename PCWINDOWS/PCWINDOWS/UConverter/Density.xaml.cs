@@ -18,17 +18,14 @@ namespace PCWINDOWS.UConverter
         public Density()
         {
             InitializeComponent();
-            items = new ObservableCollection<string>();
-            foreach (string str in itemsarray)
-                items.Add(str);
-            densitypicker.ItemsSource = items;
-            lbft.Text = "";
-            gcm.Text = "";
-            kgm.Text = "";
-            api.Text = "";
-            baume.Text = "";
         }
-        private void Selection_Changed(object sender, SelectionChangedEventArgs e)
+
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Loaddata();
+        }
+
+        private void Loaddata()
         {
             if (densitypicker.SelectedIndex == 0)
             {
@@ -48,15 +45,15 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double lb = int.Parse(density.Text);
-                    double g = lb *(0.016018463306);
-                    double k = lb *(16.018463306);;
-                    double a = lb * 8702.06 ;
-                    double b=  lb * 8609.92;
+                    double g = lb * (0.016018463306);
+                    double k = lb * (16.018463306); ;
+                    double a = lb * 8702.06;
+                    double b = lb * 8609.92;
                     lbft.Text = lb.ToString();
                     gcm.Text = g.ToString();
                     kgm.Text = k.ToString();
                     api.Text = a.ToString();
-                    baume.Text=b.ToString();
+                    baume.Text = b.ToString();
                 }
             }
             if (densitypicker.SelectedIndex == 2)
@@ -142,7 +139,11 @@ namespace PCWINDOWS.UConverter
                     baume.Text = b.ToString();
                 }
             }
+        }
 
+        private void Selection_Changed(object sender, SelectionChangedEventArgs e)
+        {
+            Loaddata();
         }
 
     }

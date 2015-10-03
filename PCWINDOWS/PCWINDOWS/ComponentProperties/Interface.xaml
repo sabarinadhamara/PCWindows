@@ -11,24 +11,23 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" shell:SystemTray.BackgroundColor="#F7F7F7">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid VerticalAlignment="Top"  Height="60" Background="#F5F5F5">
+        <Grid VerticalAlignment="Top"  Height="60" Background="#F7F7F7">
             <TextBlock x:Name="ListHeader" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="28" TextWrapping="Wrap" Text="Component Properties"  Width="480" Margin="0,16,0,1" FontFamily="Optima Regular"  Height="43" Foreground="Black"/>
-
         </Grid>
 
         <Grid Margin="0,60,0,0"  >
             <Grid.Background>
                 <ImageBrush ImageSource="/Images/3.png"  Opacity="0.2" Stretch="Uniform"/>
             </Grid.Background>
-            <ScrollViewer>
-                <phone:LongListSelector Name="StateListBox" SelectionChanged="StateListBox_SelectionChanged" >
+            <ScrollViewer >
+                <phone:LongListSelector Name="StateListBox"  SelectionChanged="StateListBox_SelectionChanged" >
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
-                            <Grid >
+                            <Grid>
                                 <Border BorderBrush="Black" Height="60" Width="480" BorderThickness="0,0,0,1">
                                     <TextBlock Text="{Binding}" FontSize="20" Margin="10,0,0,0" VerticalAlignment="Center" FontFamily="Optima Regular" Foreground="Black"/>
                                 </Border>

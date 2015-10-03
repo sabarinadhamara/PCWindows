@@ -31,6 +31,11 @@ namespace PCWINDOWS.UConverter
 
         private void Selection_Changed(object sender, SelectionChangedEventArgs e)
         {
+            Loaddata();
+        }
+
+        private void Loaddata()
+        {
             if (powerpicker.SelectedIndex == 0)
             {
                 watt.Text = "";
@@ -49,13 +54,13 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double w = int.Parse(power.Text);
-                    double hp = w*0.001341022089595;
-                    double calh = w*860.42065;
-                    double btuh = w*3.41214163;
+                    double hp = w * 0.001341022089595;
+                    double calh = w * 860.42065;
+                    double btuh = w * 3.41214163;
                     double r = w * 0.000284345136261;
                     watt.Text = w.ToString();
                     harse.Text = hp.ToString();
-                    cal.Text=calh.ToString();
+                    cal.Text = calh.ToString();
                     btu.Text = btuh.ToString();
                     rt.Text = r.ToString();
                 }
@@ -143,6 +148,11 @@ namespace PCWINDOWS.UConverter
                     rt.Text = r.ToString();
                 }
             }
+        }
+
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Loaddata();
         }
 
     }

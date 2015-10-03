@@ -12,22 +12,23 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.BackgroundColor="#F7F7F7">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="White">
 
-        <Grid VerticalAlignment="Top"  Height="60" Background="#F5F5F5">
+        <Grid VerticalAlignment="Top"  Height="60" Background="#F7F7F7">
             <TextBlock x:Name="Header" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="28" TextWrapping="Wrap" Text="Area"  Width="480" Margin="0,16,0,1" FontFamily="Optima Regular" Height="43" Foreground="Black"/>
         </Grid>
         <ScrollViewer>
-            <Grid Margin="0,60,0,0" Background="White">
+            <Grid Margin="0,60,0,0" Background="White" Tap="Grid_Tap">
                 <StackPanel>
 
-                    <toolkit:PhoneTextBox x:Name="area" Hint="Enter Value" InputScope="Number" AcceptsReturn="True" Background="White" />
+                    <toolkit:PhoneTextBox x:Name="area" Hint="Enter Value" Foreground="Black" InputScope="Number" AcceptsReturn="True" Background="White" />
 
                     <Border  CornerRadius="10" Margin="150,10,20,0" Padding="2"  >
-                        <toolkit:ListPicker Name="areapicker" ExpansionMode="ExpansionAllowed"  SelectionChanged="Selection_Changed" Background="#F5F5F5" Margin="0,0,0,0"  />
+                        <toolkit:ListPicker Name="areapicker" Foreground="Black" ExpansionMode="ExpansionAllowed"  SelectionChanged="Selection_Changed" Background="#F5F5F5" Margin="0,0,0,0"  />
                     </Border>
 
                     <Grid Margin="5,70,5,0">
@@ -36,33 +37,33 @@
                                 <StackPanel Orientation="Vertical" Margin="5,5,5,5">
 
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Acre              :    "/>
-                                        <TextBlock Name="acre"/>
+                                        <TextBlock Text="Acre              :    " Foreground="Black" />
+                                        <TextBlock Name="acre" Foreground="Black"/>
                                     </StackPanel>
                                     <Line Stroke="White" StrokeThickness="1" X1="0" X2="430" Margin="0,5,0,0"/>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Inch Square  :    "/>
-                                        <TextBlock Name="insq"/>
+                                        <TextBlock Text="Inch Square  :    " Foreground="Black"/>
+                                        <TextBlock Name="insq" Foreground="Black"/>
                                     </StackPanel>
                                     <Line Stroke="White" StrokeThickness="1" X1="0" X2="430" Margin="0,5,0,0"/>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Feet Square  :   "/>
-                                        <TextBlock Name="ftsq" />
+                                        <TextBlock Text="Feet Square  :   " Foreground="Black"/>
+                                        <TextBlock Name="ftsq" Foreground="Black" />
                                     </StackPanel>
                                     <Line Stroke="White" StrokeThickness="1" X1="0" X2="430" Margin="0,5,0,0"/>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Are               :    "/>
-                                        <TextBlock Name="are"/>
+                                        <TextBlock Text="Are               :    " Foreground="Black"/>
+                                        <TextBlock Name="are" Foreground="Black"/>
                                     </StackPanel>
                                     <Line Stroke="White" StrokeThickness="1" X1="0" X2="430" Margin="0,5,0,0"/>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Meter Square : "/>
-                                        <TextBlock Name="mtsq"/>
+                                        <TextBlock Text="Meter Square : " Foreground="Black"/>
+                                        <TextBlock Name="mtsq" Foreground="Black"/>
                                     </StackPanel>
                                     <Line Stroke="White" StrokeThickness="1" X1="0" X2="430" Margin="0,5,0,0"/>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Hectare        :    "/>
-                                        <TextBlock Name="hect"/>
+                                        <TextBlock Text="Hectare        :    " Foreground="Black"/>
+                                        <TextBlock Name="hect" Foreground="Black"/>
                                     </StackPanel>
                                 </StackPanel>
                             </Grid>

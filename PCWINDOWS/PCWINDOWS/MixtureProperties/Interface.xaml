@@ -11,7 +11,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" shell:SystemTray.BackgroundColor="#F7F7F7">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -25,7 +25,7 @@
                 <Grid.Background>
                     <ImageBrush ImageSource="/Images/4s.png"  Opacity="0.2" Stretch="None"/>
                 </Grid.Background>
-                <ScrollViewer>
+                <ScrollViewer >
                     <phone:LongListSelector Name="StateListBox" SelectionChanged="StateListBox_SelectionChanged" >
                         <phone:LongListSelector.ItemTemplate>
                             <DataTemplate>

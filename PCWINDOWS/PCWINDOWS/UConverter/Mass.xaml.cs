@@ -29,6 +29,11 @@ namespace PCWINDOWS.UConverter
         }
         private void Selection_Changed(object sender, SelectionChangedEventArgs e)
         {
+            Loaddata();
+        }
+
+        private void Loaddata()
+        {
             if (masspicker.SelectedIndex == 0)
             {
                 milli.Text = "";
@@ -46,9 +51,9 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double mm = int.Parse(mass.Text);
-                    double g =mm*0.001 ;
-                    double kg =mm*0.000001 ;
-                    double po =mm*0.000002204622621849 ;
+                    double g = mm * 0.001;
+                    double kg = mm * 0.000001;
+                    double po = mm * 0.000002204622621849;
                     milli.Text = mm.ToString();
                     gram.Text = g.ToString();
                     kilo.Text = kg.ToString();
@@ -67,7 +72,7 @@ namespace PCWINDOWS.UConverter
                     double g = int.Parse(mass.Text);
                     double mm = g / 0.001;
                     double kg = mm * 0.000001;
-                    double po = mm*0.000002204622621849;
+                    double po = mm * 0.000002204622621849;
                     milli.Text = mm.ToString();
                     gram.Text = g.ToString();
                     kilo.Text = kg.ToString();
@@ -84,9 +89,9 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double kg = int.Parse(mass.Text);
-                    double mm = kg/0.000001; 
+                    double mm = kg / 0.000001;
                     double g = mm * 0.001;
-                    double po = mm*0.000002204622621849;
+                    double po = mm * 0.000002204622621849;
                     milli.Text = mm.ToString();
                     gram.Text = g.ToString();
                     kilo.Text = kg.ToString();
@@ -103,7 +108,7 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double po = int.Parse(mass.Text);
-                    double mm = po/0.000002204622621849;
+                    double mm = po / 0.000002204622621849;
                     double g = mm * 0.001;
                     double kg = mm * 0.000001;
                     milli.Text = mm.ToString();
@@ -112,6 +117,11 @@ namespace PCWINDOWS.UConverter
                     pound.Text = po.ToString();
                 }
             }
+        }
+
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Loaddata();
         }
 
     }

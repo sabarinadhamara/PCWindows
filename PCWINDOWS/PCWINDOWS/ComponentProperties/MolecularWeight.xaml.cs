@@ -1,65 +1,97 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Linq.Mapping;
+using System.Data.Linq.SqlClient;
 using System.Net;
-using System.IO;
-using SQLite;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-
+using SQLite;
+using System.IO;
+using System.Data.Common;
+using Mono.Data.Sqlite;
 
 namespace PCWINDOWS.ComponentProperties
 {
     public partial class MolecularWeight : PhoneApplicationPage
     {
-        public static string path = @"mydata3.sqlite";
-        SQLiteAsyncConnection dbconn = new SQLiteAsyncConnection(path, true);        
-        
+        public static string cs = "URI=file:phydata.sqlite";
+        SqliteConnection con = new SqliteConnection(cs);
         List<string> listA = new List<string>();
-        List<string> listB = new List<string>();
    
         public MolecularWeight()
         {
             InitializeComponent();
-          /*var reader = new StreamReader(File.OpenRead(@"mydata3.csv"));
-            
-            while (!reader.EndOfStream)
-            {
-                var line = reader.ReadLine();
-                var values = line.Split(';');
-
-                listA.Add(values[2]);
-                listB.Add(values[3]);
-            }*/
-          
-
-            comppicker.ItemsSource = listA ; 
+            //Loadasyncdata();
+            LoadData();
+            //molwtdata();
         }
+
        
 
-        /* public class comptype
+       
+        private void molwtdata()
         {
-            public string srno { set; get; }
-            public string descp { set; get; }
+            con.Open();
+
+            string stm = "SELECT * FROM windowsdata WHERE comp ='" + comppicker.SelectedItem + "' ORDER BY comp ";
+
+            using (SqliteCommand cmd = new SqliteCommand(stm, con))
+            {
+                using (SqliteDataReader rdr = cmd.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        mw.Text = rdr[3].ToString();
+                    }
+                }
+            }
+            con.Close(); 
         }
-       private void click_Click(object sender, RoutedEventArgs e)
+
+        private  void LoadData()
         {
-           // int selsection = comppicker.SelectedIndex;
-            //mw.Text = listB.ElementAt(selsection).ToString();
+            con.Open();
 
-            //dbconn.CreateTableAsync<comptype>();
-            
-            //var query = dbconn.QueryAsync<comptype>("select descp from comptype where srno='"+3+"'");
-            //mw.Text = query.ToString();
-        }*/
+            string stm = "SELECT * FROM windowsdata ORDER BY comp ";
 
+            using (SqliteCommand cmd = new SqliteCommand(stm, con))
+            {
+                using (SqliteDataReader rdr = cmd.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                            listA.Add(rdr.GetString(1));
+                    }
+                }
+            }
+            con.Close();
+
+            comppicker.ItemsSource = listA;       
+        }
+  
         private void Selection_Changed(object sender, SelectionChangedEventArgs e)
         {
-           // int selsection = comppicker.SelectedIndex;
-            //mw.Text = listB.ElementAt(selsection).ToString();
+            molwtdata();
+        }
+
+        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            /*SystemTray.ProgressIndicator = new ProgressIndicator();
+            SystemTray.ProgressIndicator.Text = "Acquiring";
+            SystemTray.ProgressIndicator.IsIndeterminate = true;
+            SystemTray.ProgressIndicator.IsVisible = true;
+           // LoadData();*/
+            SystemTray.ProgressIndicator.IsVisible = false;
+        }
+        
+
+        private void PhoneApplicationPage_Unloaded(object sender, RoutedEventArgs e)
+        {
+
         }
 
     }

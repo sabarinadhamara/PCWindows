@@ -32,14 +32,14 @@ namespace PCWINDOWS.MixtureProperties
         }
         private void StateListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           /* if (StateListBox.SelectedItem.Equals("K(Cp/Cv Mixture Value)"))
-                NavigationService.Navigate(new Uri("/UC.xaml", UriKind.Relative));
-            if (StateListBox.SelectedItem.Equals("Bubble Pressure"))
-                NavigationService.Navigate(new Uri("/UConverter/Area.xaml", UriKind.Relative));
             if (StateListBox.SelectedItem.Equals("Freezing Point"))
-                NavigationService.Navigate(new Uri("/UConverter/Density.xaml", UriKind.Relative));
+                NavigationService.Navigate(new Uri("/MixtureProperties/FreezingPoint.xaml", UriKind.Relative));
+            if (StateListBox.SelectedItem.Equals("K(Cp/Cv Mixture Value)"))
+                NavigationService.Navigate(new Uri("/MixtureProperties/KCpCvMixtureValue.xaml", UriKind.Relative));
+            if (StateListBox.SelectedItem.Equals("Bubble Pressure"))
+                NavigationService.Navigate(new Uri("/MixtureProperties/BubblePressure.xaml", UriKind.Relative));           
             if (StateListBox.SelectedItem.Equals("Dew Pressure"))
-                NavigationService.Navigate(new Uri("/UConverter/Energy.xaml", UriKind.Relative));*/
+                NavigationService.Navigate(new Uri("/MixtureProperties/DewPressure.xaml", UriKind.Relative));
            }
 
 

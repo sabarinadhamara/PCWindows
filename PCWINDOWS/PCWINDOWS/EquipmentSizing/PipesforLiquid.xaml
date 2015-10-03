@@ -1,0 +1,179 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PCWINDOWS.EquipmentSizing.PipesforLiquid"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"   
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True" shell:SystemTray.BackgroundColor="#F7F7F7">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid VerticalAlignment="Top"  Height="60" Background="#F7F7F7">
+            <TextBlock x:Name="Header" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="28" TextWrapping="Wrap" Text="Pipes For Liquid "  Width="480" Margin="0,16,0,1" FontFamily="Optima Regular"  Height="43" Foreground="Black"/>
+        </Grid>
+        <ScrollViewer>
+            <Grid Margin="0,60,0,0" Background="White">
+                <StackPanel>
+                    <TextBlock Name="Display" Text="Inputs" FontSize="20" Height="40" Width="400" Margin="10,20,40,0" TextWrapping="Wrap" Foreground="Black"/>
+
+                    <TextBlock Name="Display2" Text="Pipe Used:" FontSize="20" Height="40" Width="400" Margin="10,0,40,0" TextWrapping="Wrap" Foreground="Black"/>
+
+                    <Border  CornerRadius="10" Margin="20,0,20,0" Padding="2"  >
+                        <toolkit:ListPicker Name="comppicker" ExpansionMode="ExpansionAllowed"  Background="#F5F5F5" Margin="0,0,0,0"  FontSize="18" SelectionChanged="comppicker_SelectionChanged" />
+                    </Border>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Straight Pipe Length  (m)        : " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="straightpipel" Width="100" Height="60" Text="100" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <TextBlock Text="Input Piping Items (Equivalent Length Calculator.)" FontSize="16" Foreground="Black" HorizontalAlignment="Center" Width="400" TextWrapping="Wrap" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Piping Items                                " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <TextBlock Text="Quantity   " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="45 Elbow                                  :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="elbow1" Width="100" Height="60" Text="0" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="90 Elbow                                  :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="elbow2" Width="100" Height="60" Text="2" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Tee                                           :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="tee" Width="100" Height="60" Text="0" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Coupling/Union                       :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="coupling" Width="100" Height="60" Text="0" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <TextBlock Text="Valves" Foreground="Black" FontSize="24" Margin="10,0,0,0"/>
+                    <TextBlock Text="(Other piping are being added. As for now, use the closest type of eg. for ball value use use global valve and proceed ... safety precaution add 10% ti the straight pipe length to cover for these inaccuracies.)" FontSize="16" Foreground="Black" HorizontalAlignment="Center" Width="400" Height="100" TextWrapping="Wrap" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,0,20,0" >
+                        <TextBlock Text="Diaphragm valve                     :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="diaprhragm" Width="100" Height="60" Text="0" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Globe valve                             :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="globe" Width="100" Height="60" Text="0" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Butterfly Valve                         :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="butterfly" Width="100" Height="60" Text="0" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Check Valve                             :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="check" Width="100" Height="60" Text="0" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Water Meter                            :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="watermeter" Width="100" Height="60" Text="0" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    
+                    <TextBlock Text="Flow Information" Foreground="Black" HorizontalAlignment="Center" FontSize="24" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Inner Diameter (mm)               :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="india" Width="100" Height="60" Text="50" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <TextBlock Text="(A table of Pipe ID,OD,Schedule will be added As of now refer table in perrys and enter manually)" FontSize="16" Foreground="Black" HorizontalAlignment="Center" Width="400" Height="80" TextWrapping="Wrap" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,00,20,0" >
+                        <TextBlock Text="Flowrate(m3/h)                        :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="flowrate" Width="100" Height="60" Text="5" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Density(kg/m3)                        :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="density" Width="100" Height="60" Text="1000" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Viscosity (mpa s= cP)              :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="viscosity" Width="100" Height="60" Text="1" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Elevation Difference (m)          :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="elevationdiff" Width="100" Height="60" Text="0" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <TextBlock Text="(Positive Elevation difference for height rise,Negative for height loss)" FontSize="16" Foreground="Black" HorizontalAlignment="Center" Width="400" Height="80" TextWrapping="Wrap" />
+
+
+
+
+                    <Border Margin="0,20,0,0"   Background="White" BorderBrush="#f5f4f4" Height="70" BorderThickness="15" Width="250" CornerRadius="1">
+                        <Button Name="calculate" Content="Calculate" Click="calculate_Click" VerticalAlignment="Center" Height="70" Background="#F5F4F4" Width="250" Foreground="#324F85" Margin="-14,-1,-1,-1"  BorderBrush="#F5F4F4" BorderThickness="0"/>
+                    </Border>
+                    <TextBlock Text="Output" Foreground="Black" Margin="10,0,0,0"/>
+                        <Grid Margin="5,0,5,0">
+                        <Border BorderThickness="15" BorderBrush="#FFBFE1C3" CornerRadius="2">
+                            <Grid Background="#FFBFE1C3" Margin="-1,-1,-1,-1" >
+                                <StackPanel Orientation="Vertical" Margin="5,5,5,5">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="K   :   "/>
+                                        <TextBlock Name="K"/>
+                                    </StackPanel>
+                                    <TextBlock/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Pressuer Drop (Bar)   :   " Foreground="Black"/>
+                                        <TextBlock Name="pressdrop" Foreground="Black"/>
+                                    </StackPanel>
+                                    <TextBlock/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Flow-Regime    :   " Foreground="Black"/>
+                                        <TextBlock Name="flowregime" Foreground="Black"/>
+                                    </StackPanel>
+                                    <TextBlock/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Velocity (m/s)   :   " Foreground="Black"/>
+                                        <TextBlock Name="velocity" Foreground="Black"/>
+                                    </StackPanel>
+                                    <TextBlock/>
+                                    <TextBlock/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    
+                </StackPanel>
+            </Grid>
+
+        </ScrollViewer>
+        <Image Source="Images/3sg.png" Height="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Opacity="0.5"/>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

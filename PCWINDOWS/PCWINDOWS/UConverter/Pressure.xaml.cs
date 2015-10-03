@@ -36,6 +36,11 @@ namespace PCWINDOWS.UConverter
         }
         private void Selection_Changed(object sender, SelectionChangedEventArgs e)
         {
+            Loaddata();
+        }
+
+        private void Loaddata()
+        {
             if (pressurepicker.SelectedIndex == 0)
             {
                 atm.Text = "";
@@ -59,7 +64,7 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double at = int.Parse(pressure.Text);
-                    double ba =at *1.01325;
+                    double ba = at * 1.01325;
                     double mm = at * 760;
                     double p = at * 101325;
                     double mpa = at * 0.101325;
@@ -68,7 +73,7 @@ namespace PCWINDOWS.UConverter
                     double lb = at * 2116.220402;
                     double ps = at * 14.6959487755134;
                     double cmw = at * 1033.227452799886;
-                    double kgc = at*1.033227452799886;
+                    double kgc = at * 1.033227452799886;
                     atm.Text = at.ToString();
                     bar.Text = ba.ToString();
                     mmhg.Text = mm.ToString();
@@ -79,7 +84,7 @@ namespace PCWINDOWS.UConverter
                     Lb.Text = lb.ToString();
                     psi.Text = ps.ToString();
                     CmW.Text = cmw.ToString();
-                    kg.Text = kgc.ToString(); 
+                    kg.Text = kgc.ToString();
                 }
             }
 
@@ -92,7 +97,7 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double ba = int.Parse(pressure.Text);
-                    double at = ba/1.01325;
+                    double at = ba / 1.01325;
                     double mm = at * 760;
                     double p = at * 101325;
                     double mpa = at * 0.101325;
@@ -125,7 +130,7 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double mm = int.Parse(pressure.Text);
-                    double at = mm/ 760;
+                    double at = mm / 760;
                     double ba = at * 1.01325;
                     double p = at * 101325;
                     double mpa = at * 0.101325;
@@ -158,7 +163,7 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double p = int.Parse(pressure.Text);
-                    double at = p/101325;
+                    double at = p / 101325;
                     double ba = at * 1.01325;
                     double mm = at * 760;
                     double mpa = at * 0.101325;
@@ -191,7 +196,7 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double mpa = int.Parse(pressure.Text);
-                    double at = mpa/ 0.101325;
+                    double at = mpa / 0.101325;
                     double ba = at * 1.01325;
                     double mm = at * 760;
                     double p = at * 101325;
@@ -224,7 +229,7 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double kpa = int.Parse(pressure.Text);
-                    double at = kpa/ 101.325;
+                    double at = kpa / 101.325;
                     double ba = at * 1.01325;
                     double mm = at * 760;
                     double p = at * 101325;
@@ -323,7 +328,7 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double ps = int.Parse(pressure.Text);
-                    double at = ps/14.6959487755134;
+                    double at = ps / 14.6959487755134;
                     double ba = at * 1.01325;
                     double mm = at * 760;
                     double p = at * 101325;
@@ -376,7 +381,7 @@ namespace PCWINDOWS.UConverter
                     Lb.Text = lb.ToString();
                     psi.Text = ps.ToString();
                     CmW.Text = cmw.ToString();
-                    kg.Text = kgc.ToString(); 
+                    kg.Text = kgc.ToString();
                 }
             }
 
@@ -409,9 +414,14 @@ namespace PCWINDOWS.UConverter
                     Lb.Text = lb.ToString();
                     psi.Text = ps.ToString();
                     CmW.Text = cmw.ToString();
-                    kg.Text = kgc.ToString(); 
+                    kg.Text = kgc.ToString();
                 }
             }
+        }
+
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Loaddata();
         }
 
     }

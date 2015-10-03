@@ -12,11 +12,17 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
-
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded" Unloaded="PhoneApplicationPage_Unloaded"
+    shell:SystemTray.BackgroundColor="#F7F7F7"
+    shell:SystemTray.ForegroundColor="Black"
+    shell:SystemTray.Opacity="1">
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator Text="Data is loading" IsIndeterminate="True" IsVisible="True" />
+    </shell:SystemTray.ProgressIndicator>
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid VerticalAlignment="Top"  Height="60" Background="#F5F5F5">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid VerticalAlignment="Top"  Height="60" Background="#F7F7F7">
             <TextBlock x:Name="Header" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="28" TextWrapping="Wrap" Text="Concentration Units"  Width="480" Margin="0,16,0,1" FontFamily="Optima Regular" Height="43" Foreground="Black"/>
         </Grid>
         <ScrollViewer>
@@ -24,18 +30,20 @@
                 <StackPanel>
 
                     <Border  CornerRadius="10" Margin="20,10,20,0" Padding="2"  >
-                        <toolkit:ListPicker Name="areapicker" ExpansionMode="ExpansionAllowed"   Background="#F5F5F5" Margin="0,0,0,0"  />
+                        <toolkit:ListPicker Name="comppicker"  Foreground="Black" ExpansionMode="ExpansionAllowed"   Background="#F5F5F5" Margin="0,0,0,0" FontSize="20"  />
                     </Border>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Mol/Wt% :  " Foreground="Black" VerticalAlignment="Center" Margin="20"/>
-                        <TextBox x:Name="amount"  InputScope="Number" AcceptsReturn="True" Background="White" Width="150" />
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="120" CornerRadius="5">
+                            <TextBox x:Name="amount" Width="120" Height="60" AcceptsReturn="True" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
                         <Button x:Name="Add" Margin="50,0,0,0" Content="Add" Foreground="SkyBlue" Background="#F8F8F8" BorderBrush="#F8F8F8" BorderThickness="2" Click="Add_Click"/>
                     </StackPanel>
 
 
                     <Grid Margin="5,20,5,0">
                         <Border BorderThickness="15" BorderBrush="Pink" CornerRadius="2">
-                            <Grid Background="Pink" >
+                            <Grid Background="Pink"  Margin="-1,-1,-1,-1" >
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="Total %  :  "/>
                                     <TextBlock Name="total" />
@@ -55,7 +63,7 @@
 
                     <Grid Margin="5,30,5,0">
                         <Border BorderThickness="15" BorderBrush="Pink" CornerRadius="2">
-                            <Grid Background="Pink" >
+                            <Grid Background="Pink"  Margin="-1,-1,-1,-1">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*"/>
                                     <RowDefinition Height="*"/>
@@ -65,35 +73,42 @@
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="41*"/>
+                                    <ColumnDefinition Width="34*"/>
+                                    <ColumnDefinition Width="35*"/>
                                 </Grid.ColumnDefinitions>
-                                    <TextBlock Text="Component"/>
-                                    <TextBlock Grid.Row="0" Grid.Column="1" Text="Mol.perct%"/>
-                                <TextBlock Grid.Row="0" Grid.Column="2" Text="Weight.Perct%"/>
-                                <TextBlock Grid.Row="1" Grid.Column="1" Text="Mol.perct%"/>
-                                <TextBlock Grid.Row="1" Grid.Column="2" Text="Weight.Perct%"/>
-                                <TextBlock Grid.Row="2" Grid.Column="1" Text="Mol.perct%"/>
-                                <TextBlock Grid.Row="2" Grid.Column="2" Text="Weight.Perct%"/>
-                                <TextBlock Grid.Row="3" Grid.Column="1" Text="Mol.perct%"/>
-                                <TextBlock Grid.Row="3" Grid.Column="2" Text="Weight.Perct%"/>
-                                <TextBlock Grid.Row="4" Grid.Column="1" Text="Mol.perct%"/>
-                                <TextBlock Grid.Row="4" Grid.Column="2" Text="Weight.Perct%"/>
-                                <TextBlock Grid.Row="5" Grid.Column="1" Text="Mol.perct%"/>
-                                <TextBlock Grid.Row="5" Grid.Column="2" Text="Weight.Perct%"/>
+                                <TextBlock Grid.Row="0" Grid.Column="0" Text="Component"  Foreground="Black"/>
+                                <TextBlock Grid.Row="1" Grid.Column="0" Name="Component1" FontSize="14"/>
+                                <TextBlock Grid.Row="2" Grid.Column="0" Name="Component2" FontSize="14"/>
+                                <TextBlock Grid.Row="3" Grid.Column="0" Name="Component3" FontSize="14"/>
+                                <TextBlock Grid.Row="4" Grid.Column="0" Name="Component4" FontSize="14"/>
+                                <TextBlock Grid.Row="5" Grid.Column="0" Name="Component5" FontSize="14"/>
+                                <TextBlock Grid.Row="0" Grid.Column="1" Text="Mol.perct%" Foreground="Black"/>
+                                <TextBlock Grid.Row="0" Grid.Column="2" Text="Weight.Perct%" Foreground="Black"/>
+                                <TextBlock Grid.Row="1" Grid.Column="1" Name="Mol1"/>
+                                <TextBlock Grid.Row="1" Grid.Column="2" Name="wt1"/>
+                                <TextBlock Grid.Row="2" Grid.Column="1" Name="Mol2"/>
+                                <TextBlock Grid.Row="2" Grid.Column="2" Name="wt2"/>
+                                <TextBlock Grid.Row="3" Grid.Column="1" Name="Mol3"/>
+                                <TextBlock Grid.Row="3" Grid.Column="2" Name="wt3"/>
+                                <TextBlock Grid.Row="4" Grid.Column="1" Name="Mol4"/>
+                                <TextBlock Grid.Row="4" Grid.Column="2" Name="wt4"/>
+                                <TextBlock Grid.Row="5" Grid.Column="1" Name="Mol5"/>
+                                <TextBlock Grid.Row="5" Grid.Column="2" Name="wt5"/>
 
                             </Grid>
                         </Border>
                     </Grid>
 
-                    <Button x:Name="calculate" BorderBrush="#F8F8F8" BorderThickness="2" Foreground="Black" Content="Calculate" Background="#F8F8F8 " Margin="100,50" Click="calculate_Click" />
-                       
+                    <Border Margin="0,20,0,0"   Background="White" BorderBrush="#f5f4f4" Height="70" BorderThickness="15" Width="250" CornerRadius="1">
+                        <Button Name="calculate" Content="Calculate" Click="calculate_Click" VerticalAlignment="Center" Height="70" Background="#F5F4F4" Width="250" Foreground="#324F85" Margin="-14,-1,-1,-1"  BorderBrush="#F5F4F4" BorderThickness="0"/>
+                    </Border>
+
                 </StackPanel>
             </Grid>
         </ScrollViewer>
         <Image Source="Images/1.png" Height="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Opacity="0.5"/>
-        
+
     </Grid>
 
 </phone:PhoneApplicationPage>

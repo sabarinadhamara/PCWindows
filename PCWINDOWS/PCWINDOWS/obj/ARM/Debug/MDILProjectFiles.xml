@@ -3,8 +3,18 @@
   <XAPFiles>
     <File>resources.pri</File>
     <File>PCWINDOWS.dll</File>
-    <File>chemicalnames2.csv</File>
-    <File>Images\Splash.png</File>
+    <File>arrow.png</File>
+    <File>icon4.png</File>
+    <File>Images\3sg.png</File>
+    <File>Images\cart_black.png</File>
+    <File>Images\Lock.png</File>
+    <File>Images\purchase.png</File>
+    <File>Images\share.png</File>
+    <File>Images\tick_green.png</File>
+    <File>Logo170X170.jpg</File>
+    <File>SplashScreenImage.jpg</File>
+    <File>Tilewide.jpg</File>
+    <File>VAPDATA2.sqlite</File>
     <File>mydata3.csv</File>
     <File>phydata.sqlite</File>
     <File>Assets\AlignmentGrid.png</File>
@@ -19,19 +29,15 @@
     <File>Assets\StoreLogo.png</File>
     <File>Assets\WideLogo.png</File>
     <File>Assets\Tiles\FlipCycleTileLarge.png</File>
+    <File>Assets\Tiles\FlipCycleTileMedium.png</File>
     <File>Assets\Tiles\FlipCycleTileSmall.png</File>
     <File>Assets\Tiles\IconicTileMediumLarge.png</File>
     <File>Assets\Tiles\IconicTileSmall.png</File>
     <File>Images\1.png</File>
     <File>Images\3.png</File>
-    <File>Images\3sg.png</File>
     <File>Images\4s.png</File>
     <File>Images\arrow.png</File>
-    <File>Images\bg.png</File>
-    <File>Images\ios_back_button.png</File>
-    <File>Images\iPhoneSplash.png</File>
     <File>Images\mainbg.png</File>
-    <File>Images\Screen.png</File>
     <File>README_FIRST.txt</File>
     <File>Toolkit.Content\ApplicationBar.Add.png</File>
     <File>Toolkit.Content\ApplicationBar.Cancel.png</File>
@@ -39,7 +45,6 @@
     <File>Toolkit.Content\ApplicationBar.Delete.png</File>
     <File>Toolkit.Content\ApplicationBar.Select.png</File>
     <File>AppManifest.xaml</File>
-    <File>Assets\Tiles\FlipCycleTileMedium.png</File>
     <File>Microsoft.Phone.Controls.dll</File>
     <File>Microsoft.Phone.Controls.Maps.dll</File>
     <File>Microsoft.Phone.Controls.Toolkit.dll</File>
@@ -51,6 +56,7 @@
     <File>Sqlite.dll</File>
     <File>MonoDataSqliteWrapper.dll</File>
     <File>sqlite3.dll</File>
+    <File>Logo360X360.jpg</File>
     <File>Images\icon4.png</File>
     <File>WMAppManifest.xml</File>
     <File>AppxManifest.xml</File>

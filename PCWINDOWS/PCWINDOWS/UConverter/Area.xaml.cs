@@ -31,6 +31,11 @@ namespace PCWINDOWS
         }
         private void Selection_Changed(object sender, SelectionChangedEventArgs e)
         {
+            Loaddata();
+        }
+
+        private void Loaddata()
+        {
             if (areapicker.SelectedIndex == 0)
             {
                 acre.Text = "";
@@ -43,7 +48,7 @@ namespace PCWINDOWS
 
             if (areapicker.SelectedIndex == 1)
             {
-                if (area.Text =="")
+                if (area.Text == "")
                 {
                     MessageBox.Show("Enter a Value");
                 }
@@ -54,12 +59,12 @@ namespace PCWINDOWS
                     double foot = ac * 43560;
                     double meter = ac * 4046.856422;
                     double hct = ac * 0.4046856422;
-                    double ar=ac/ 40.4685642; 
+                    double ar = ac / 40.4685642;
                     acre.Text = ac.ToString();
                     insq.Text = inch.ToString();
                     ftsq.Text = foot.ToString();
                     are.Text = ar.ToString();
-                    mtsq.Text =meter.ToString();
+                    mtsq.Text = meter.ToString();
                     hect.Text = hct.ToString();
                 }
             }
@@ -73,11 +78,11 @@ namespace PCWINDOWS
                 else
                 {
                     double inch = int.Parse(area.Text);
-                    double ac = inch/ 6272600;
+                    double ac = inch / 6272600;
                     double foot = ac * 43560;
                     double meter = ac * 4046.856422;
                     double hct = ac * 0.4046856422;
-                    double ar = ac / 40.4685642; 
+                    double ar = ac / 40.4685642;
                     acre.Text = ac.ToString();
                     insq.Text = inch.ToString();
                     ftsq.Text = foot.ToString();
@@ -99,7 +104,7 @@ namespace PCWINDOWS
                     double ac = foot / 43560;
                     double inch = ac * 6272600;
                     double meter = ac * 4046.856422;
-                    double ar = ac / 40.4685642; 
+                    double ar = ac / 40.4685642;
                     double hct = ac * 0.4046856422;
                     acre.Text = ac.ToString();
                     insq.Text = inch.ToString();
@@ -119,7 +124,7 @@ namespace PCWINDOWS
                 else
                 {
                     double ar = int.Parse(area.Text);
-                    double ac=ar* 40.4685642; 
+                    double ac = ar * 40.4685642;
                     double inch = ac * 6272600;
                     double foot = ac * 43560;
                     double meter = ac * 4046.856422;
@@ -146,7 +151,7 @@ namespace PCWINDOWS
                     double inch = ac * 6272600;
                     double foot = ac * 43560;
                     double hct = ac * 0.4046856422;
-                    double ar = ac / 40.4685642; 
+                    double ar = ac / 40.4685642;
                     acre.Text = ac.ToString();
                     insq.Text = inch.ToString();
                     ftsq.Text = foot.ToString();
@@ -169,7 +174,7 @@ namespace PCWINDOWS
                     double inch = ac * 6272600;
                     double foot = ac * 43560;
                     double meter = ac * 4046.856422;
-                    double ar = ac / 40.4685642; 
+                    double ar = ac / 40.4685642;
                     acre.Text = ac.ToString();
                     insq.Text = inch.ToString();
                     ftsq.Text = foot.ToString();
@@ -178,7 +183,11 @@ namespace PCWINDOWS
                     hect.Text = hct.ToString();
                 }
             } 
+        }
 
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Loaddata();
         }
     }
 }

@@ -23,7 +23,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="AGHost.exe" EntryPoint="MainPage.xaml">
-      <m3:VisualElements DisplayName="PCWINDOWS" Square150x150Logo="Assets\SquareTile150x150.png" Square44x44Logo="Assets\icon4.png" Description="PCWINDOWS" ForegroundText="light" BackgroundColor="#464646">
+      <m3:VisualElements DisplayName="Process Calculator" Square150x150Logo="Assets\SquareTile150x150.png" Square44x44Logo="Assets\icon4.png" Description="PCWINDOWS" ForegroundText="light" BackgroundColor="#464646">
         <m3:DefaultTile Square71x71Logo="Assets\icon4.png"></m3:DefaultTile>
         <m3:SplashScreen Image="Assets\Splash.png" />
       </m3:VisualElements>

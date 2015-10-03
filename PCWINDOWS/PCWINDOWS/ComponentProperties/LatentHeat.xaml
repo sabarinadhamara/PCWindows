@@ -12,34 +12,42 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
-
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded" Unloaded="PhoneApplicationPage_Unloaded"
+    shell:SystemTray.BackgroundColor="#F7F7F7"
+    shell:SystemTray.ForegroundColor="Black"
+    shell:SystemTray.Opacity="1">
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator Text="Data is loading" IsIndeterminate="True" IsVisible="True" />
+    </shell:SystemTray.ProgressIndicator>
+    
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid VerticalAlignment="Top"  Height="60" Background="#F5F5F5">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid VerticalAlignment="Top"  Height="60" Background="#F7F7F7">
             <TextBlock x:Name="latentheat" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="28" TextWrapping="Wrap" Text="Latent Heat"  Width="480" Margin="0,16,0,1" FontFamily="Optima Regular" Height="43" Foreground="Black"/>
         </Grid>
         <ScrollViewer>
             <Grid Margin="0,60,0,0" Background="White">
                 <StackPanel>
 
-                    <TextBlock Name="Display" Text="Select Component below to obtain it's Latent Heat" FontSize="20" Height="70" Width="400" Margin="40,20,40,0" TextWrapping="Wrap" Foreground="Black"/>
+                    <TextBlock Name="Display" Text="Select Component below and enter temparature to obtain the Latent Heat" FontSize="20" Height="70" Width="400" Margin="40,20,40,0" TextWrapping="Wrap" Foreground="Black"/>
 
                     <Border  CornerRadius="10" Margin="20,20,20,0" Padding="2"  >
-                        <toolkit:ListPicker Name="comppicker" ExpansionMode="ExpansionAllowed"  Background="#F5F5F5" Margin="0,0,0,0"  FontSize="18" />
+                        <toolkit:ListPicker Name="comppicker" Foreground="Black" ExpansionMode="ExpansionAllowed" SelectionChanged="Selection_Changed"  Background="#F5F5F5" Margin="0,0,0,0"  FontSize="18" />
                     </Border>
                     <StackPanel Orientation="Horizontal" Margin="20,20,20,0" >
-                        <TextBlock Text="Temparature    :  " HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <TextBox Name="temp" Width="100" Height="60" Text="15" InputScope="Number" FontSize="18"/>
+                        <TextBlock Text="Temparature    :  " Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox Name="temp" Width="100" Height="60" Text="15" VerticalAlignment="Center" InputScope="Number" FontSize="18" Background="Transparent" BorderThickness="0"/>
+                        </Border>
                     </StackPanel>
 
                     <Grid Margin="5,70,5,0">
-                        <Border BorderThickness="15" BorderBrush="Pink" CornerRadius="2">
-                            <Grid Background="Pink" >
+                        <Border BorderThickness="15" BorderBrush="#FFBAB3EC" CornerRadius="2">
+                            <Grid Background="#FFBAB3EC" Margin="-2,-2,-2,-2">
                                 <StackPanel Orientation="Vertical" Margin="5,5,5,5">
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Latent Heat   :    "/>
-                                        <TextBlock Name="vp"/>
+                                        <TextBlock Text="Latent Heat(KJ/kg)   :    " Foreground="Black"/>
+                                        <TextBlock Name="lh" Foreground="Black"/>
                                     </StackPanel>
                                 </StackPanel>
                             </Grid>

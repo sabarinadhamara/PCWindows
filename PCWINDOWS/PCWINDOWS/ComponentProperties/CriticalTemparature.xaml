@@ -1,0 +1,63 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PCWINDOWS.ComponentProperties.CriticalTemparature"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"   
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded" Unloaded="PhoneApplicationPage_Unloaded"
+    shell:SystemTray.BackgroundColor="#F7F7F7"
+    shell:SystemTray.ForegroundColor="Black"
+    shell:SystemTray.Opacity="1">
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator Text="Data is loading" IsIndeterminate="True" IsVisible="True" />
+    </shell:SystemTray.ProgressIndicator>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid VerticalAlignment="Top"  Height="60" Background="#F7F7F7">
+            <TextBlock x:Name="CriticalTemp" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="28" TextWrapping="Wrap" Text="Critical Condition"  Width="480" Margin="0,16,0,1" FontFamily="Optima Regular" Height="43" Foreground="Black"/>
+        </Grid>
+        <ScrollViewer>
+            <Grid Margin="0,60,0,0" Background="White">
+                <StackPanel>
+
+                    <TextBlock Name="Display" Text="Select Component below to obtain the Critical Condition" FontSize="20" Height="70" Width="400" Margin="40,20,40,0" TextWrapping="Wrap" Foreground="Black"/>
+
+                    <Border  CornerRadius="10" Margin="20,20,20,0" Padding="2"  >
+                        <toolkit:ListPicker Name="comppicker" Foreground="Black" ExpansionMode="ExpansionAllowed"  SelectionChanged="Selection_Changed" Background="#F5F5F5" Margin="0,0,0,0"  FontSize="18" />
+                    </Border>
+
+                    <Grid Margin="5,70,5,0">
+                        <Border BorderThickness="15" BorderBrush="#FFBAB3EC" CornerRadius="2">
+                            <Grid Background="#FFBAB3EC" Margin="-1,-1,-1,-1">
+                                <StackPanel Orientation="Vertical" Margin="5,5,5,5">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Tc-k       :    " Foreground="Black"/>
+                                        <TextBlock Name="tc" Foreground="Black"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Pc-kpa   :    " Foreground="Black"/>
+                                        <TextBlock Name="pc" Foreground="Black"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+        <!--<Button x:Name="click" Content="click" Height="100" Width="150" Click="click_Click" />
+        -->
+        <Image Source="Images/3.png" Height="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Opacity="0.5"/>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

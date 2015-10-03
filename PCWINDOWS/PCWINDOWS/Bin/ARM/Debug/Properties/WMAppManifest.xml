@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2014/deployment" AppPlatformVersion="8.1">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{04b0c600-6959-4633-937a-fe794cf06bfd}" Title="PCWINDOWS" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="PCWINDOWS author" Description="Sample description" SDOptOut="false" BackUpOptOut="false" Publisher="PCWINDOWS" PublisherID="{15d2fcfa-2e85-4503-8793-8b28c15ad96b}">
+  <App xmlns="" ProductID="{04b0c600-6959-4633-937a-fe794cf06bfd}" Title="Process Calculator" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="PCWINDOWS author" Description="Sample description" SDOptOut="false" BackUpOptOut="false" Publisher="PCWINDOWS" PublisherID="{15d2fcfa-2e85-4503-8793-8b28c15ad96b}">
     <IconPath IsRelative="true" IsResource="false">Images\icon4.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -25,14 +25,14 @@
     <Tokens>
       <PrimaryToken TokenID="PCWINDOWSToken" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+          <SmallImageURI IsRelative="true" IsResource="false">Logo170X170.jpg</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>PCWINDOWS</Title>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Logo360X360.jpg</BackgroundImageURI>
+          <Title>Process Calculator</Title>
           <BackContent></BackContent>
           <BackBackgroundImageURI></BackBackgroundImageURI>
           <BackTitle></BackTitle>
-          <LargeBackgroundImageURI IsRelative="true" IsResource="false"></LargeBackgroundImageURI>
+          <LargeBackgroundImageURI IsRelative="true" IsResource="false">Tilewide.jpg</LargeBackgroundImageURI>
           <LargeBackContent />
           <LargeBackBackgroundImageURI IsRelative="true" IsResource="false"></LargeBackBackgroundImageURI>
           <DeviceLockImageURI></DeviceLockImageURI>

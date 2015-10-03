@@ -11,14 +11,15 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" shell:SystemTray.BackgroundColor="Transparent">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" >
+    <Grid x:Name="LayoutRoot" Margin="0,0,0,0">
         <Grid.Background>
             <ImageBrush ImageSource="/Images/mainbg.png" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
             <ColumnDefinition Width="245*"/>
             <ColumnDefinition Width="246*"/>
         </Grid.ColumnDefinitions>
@@ -67,8 +68,16 @@
                 <Image Source="Images/arrow.png" Height="20" Width="10" Margin="0,90,0,0"/>
             </StackPanel>
         </Button>
-
-
+        </Grid>         
+      <!--<Image Source="Images/splash.png" Stretch="UniformToFill" />-->
+        <Rectangle Height="50" VerticalAlignment="Bottom" Width="500" Fill="Black" />
+        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20,0,0,5">
+            <TextBlock Text="Designed and Devloped By " Foreground="#FFE3BB00" FontSize="12" HorizontalAlignment="Center" />
+            <TextBlock Text="KULDEEP VARMA AND APPFACE TECHNOLOGIES PVT.LTD." Foreground="#FFE3BB00"  FontSize="14" HorizontalAlignment="Center" />
+        </StackPanel>
+        <Image Name="settings" Source="Images/lock.png" Height="100" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="-10,0,0,-5" Tap="settings_Tap"/>
+        <Image Name="share" Source="Images/share.png" Height="100" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Right" Tap="share_Tap" />
+        
     </Grid>
-
+    
 </phone:PhoneApplicationPage>

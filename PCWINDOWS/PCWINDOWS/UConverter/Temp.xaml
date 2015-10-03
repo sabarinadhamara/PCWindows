@@ -12,21 +12,21 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" shell:SystemTray.BackgroundColor="#F7F7F7">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid VerticalAlignment="Top"  Height="60" Background="#F5F5F5">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid VerticalAlignment="Top"  Height="60" Background="#F7F7F7">
             <TextBlock x:Name="Header" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="28" TextWrapping="Wrap" Text="Temparature"  Width="480" Margin="0,16,0,1" FontFamily="Optima Regular" Height="43" Foreground="Black"/>
         </Grid>
         <ScrollViewer>
-            <Grid Margin="0,60,0,0" Background="White">
+            <Grid Margin="0,60,0,0" Background="White" Tap="Grid_Tap">
                 <StackPanel>
 
-                    <toolkit:PhoneTextBox x:Name="temparature" Hint="Enter Value" InputScope="Number" AcceptsReturn="True" Background="White" />
+                    <toolkit:PhoneTextBox x:Name="temparature" Foreground="Black" Hint="Enter Value" InputScope="Number" AcceptsReturn="True" Background="White" />
 
                     <Border  CornerRadius="10" Margin="150,10,20,0" Padding="2"  >
-                        <toolkit:ListPicker Name="temppicker" ExpansionMode="ExpansionAllowed"  SelectionChanged="Selection_Changed" Background="#F5F5F5" Margin="0,0,0,0"  />
+                        <toolkit:ListPicker Name="temppicker" Foreground="Black" ExpansionMode="ExpansionAllowed"  SelectionChanged="Selection_Changed" Background="#F5F5F5" Margin="0,0,0,0"  />
                     </Border>
 
                     <Grid Margin="5,70,5,0">
@@ -35,23 +35,23 @@
                                 <StackPanel Orientation="Vertical" Margin="5,5,5,5">
 
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Celsius          :    "/>
-                                        <TextBlock Name="cels"/>
+                                        <TextBlock Text="Celsius          :    " Foreground="Black"/>
+                                        <TextBlock Name="cels" Foreground="Black"/>
                                     </StackPanel>
                                     <Line Stroke="White" StrokeThickness="1" X1="0" X2="430" Margin="0,5,0,0"/>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Farenheit      :    "/>
-                                        <TextBlock Name="faren"/>
+                                        <TextBlock Text="Farenheit      :    " Foreground="Black"/>
+                                        <TextBlock Name="faren" Foreground="Black"/>
                                     </StackPanel>
                                     <Line Stroke="White" StrokeThickness="1" X1="0" X2="430" Margin="0,5,0,0"/>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Rankine        :   "/>
-                                        <TextBlock Name="rank" />
+                                        <TextBlock Text="Rankine        :   " Foreground="Black"/>
+                                        <TextBlock Name="rank" Foreground="Black" />
                                     </StackPanel>
                                     <Line Stroke="White" StrokeThickness="1" X1="0" X2="430" Margin="0,5,0,0"/>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Kelvin           :    "/>
-                                        <TextBlock Name="kelv"/>
+                                        <TextBlock Text="Kelvin           :    " Foreground="Black"/>
+                                        <TextBlock Name="kelv" Foreground="Black"/>
                                     </StackPanel>
                                 </StackPanel>
                             </Grid>

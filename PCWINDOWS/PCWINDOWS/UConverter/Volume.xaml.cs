@@ -31,6 +31,11 @@ namespace PCWINDOWS.UConverter
         }
         private void Selection_Changed(object sender, SelectionChangedEventArgs e)
         {
+            Loaddata();
+        }
+
+        private void Loaddata()
+        {
             if (volumepicker.SelectedIndex == 0)
             {
                 cm3.Text = "";
@@ -50,9 +55,9 @@ namespace PCWINDOWS.UConverter
                 else
                 {
                     double cm = int.Parse(volume.Text);
-                    double cf = cm*35.31466672149;
+                    double cf = cm * 35.31466672149;
                     double ci = cm * 61023.74409473;
-                    double lt = cm*1000;
+                    double lt = cm * 1000;
                     double ga = cm * 219.9692482991;
                     double ba = cm * 6.289810770432;
                     cm3.Text = cm.ToString();
@@ -174,6 +179,11 @@ namespace PCWINDOWS.UConverter
                     barrel.Text = ba.ToString();
                 }
             }
+        }
+
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Loaddata();
         }
 
     }

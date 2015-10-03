@@ -1,0 +1,114 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PCWINDOWS.EquipmentSizing.Compressor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True" shell:SystemTray.BackgroundColor="#F7F7F7">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid VerticalAlignment="Top"  Height="60" Background="#F7F7F7">
+            <TextBlock x:Name="Header" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="28" TextWrapping="Wrap" Text="Compressor"  Width="480" Margin="0,16,0,1" FontFamily="Optima Regular"  Height="43" Foreground="Black"/>
+        </Grid>
+        <ScrollViewer>
+            <Grid Margin="0,60,0,0" Background="White">
+                <StackPanel>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Gas MW(g/gmmole)                  :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="gasmw" Width="100" Height="60" Text="16" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Inlet Temparature (C)                 :  " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="inlett" Width="100" Height="60" Text="40" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Inlet Pressure (Bar)                    :   " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="inletp" Width="100" Height="60" Text="2" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Flowrate (kg/h)                          :   " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="flowrate" Width="100" Height="60" Text="802" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Outlet Pressure (Bar)                 :   " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="outletpress" Width="100" Height="60" Text="3.95" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="Polytropic Efficiency(%)             :   " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="polytropiceff" Width="100" Height="60" Text="77" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="20,20,20,0" >
+                        <TextBlock Text="K, Cp/Cv                                    :   " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black"/>
+                        <Border   Background="White" BorderBrush="#b7b7b7" Height="50" BorderThickness="1.5" Width="100" CornerRadius="5">
+                            <TextBox x:Name="kcpcv" Width="100" Height="60" Text="1.3" VerticalAlignment="Center" InputScope="Number" FontSize="18" Foreground="Black" Background="Transparent" BorderThickness="0"/>
+                        </Border>                    
+                    </StackPanel>
+
+                    <Border Margin="0,20,0,0"   Background="White" BorderBrush="#f5f4f4" Height="70" BorderThickness="15" Width="250" CornerRadius="1">
+                        <Button Name="calculate" Content="Calculate" Click="calculate_Click" VerticalAlignment="Center" Height="70" Background="#F5F4F4" Width="250" Foreground="#324F85" Margin="-14,-1,-1,-1"  BorderBrush="#F5F4F4" BorderThickness="0"/>
+                    </Border>
+                    <Grid Margin="5,40,5,0">
+                        <Border BorderThickness="15" BorderBrush="#FFBFE1C3" CornerRadius="2">
+                            <Grid Background="#FFBFE1C3" Margin="-1,-1,-1,-1" >
+                                <StackPanel Orientation="Vertical" Margin="5,5,5,5">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Outlet Temparature (C):   "/>
+                                        <TextBlock Name="outtemp"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <Grid Margin="5,40,5,0">
+                        <Border BorderThickness="15" BorderBrush="#FFBFE1C3" CornerRadius="2">
+                            <Grid Background="#FFBFE1C3" Margin="-1,-1,-1,-1" >
+                                <StackPanel Orientation="Vertical" Margin="5,5,5,5">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Head (KJ/kg):   " Foreground="Black"/>
+                                        <TextBlock Name="head" Foreground="Black"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <Grid Margin="5,40,5,0">
+                        <Border BorderThickness="15" BorderBrush="#FFBFE1C3" CornerRadius="2">
+                            <Grid Background="#FFBFE1C3" Margin="-1,-1,-1,-1" >
+                                <StackPanel Orientation="Vertical" Margin="5,5,5,5">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Power(kW):   " Foreground="Black"/>
+                                        <TextBlock Name="power" Foreground="Black"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                </StackPanel>
+            </Grid>
+
+
+        </ScrollViewer>
+        <Image Source="Images/3sg.png" Height="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Opacity="0.5"/>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

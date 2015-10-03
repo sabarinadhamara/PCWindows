@@ -31,6 +31,11 @@ namespace PCWINDOWS.UConverter
 
         private void Selection_Changed(object sender, SelectionChangedEventArgs e)
         {
+            Loaddata();
+        }
+
+        private void Loaddata()
+        {
             if (heattransfercoefficientpicker.SelectedIndex == 0)
             {
                 calsc.Text = "";
@@ -140,7 +145,11 @@ namespace PCWINDOWS.UConverter
                     btuhf.Text = btuh.ToString();
                 }
             }
+        }
 
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Loaddata();
         }
     }
 }

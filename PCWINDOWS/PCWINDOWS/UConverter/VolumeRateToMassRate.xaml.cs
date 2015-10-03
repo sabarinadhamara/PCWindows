@@ -21,10 +21,11 @@ namespace PCWINDOWS.UConverter
 
         private void Calculate_Click(object sender, RoutedEventArgs e)
         {
-            double bp =int.Parse( bpd.Text);
-            double de = int.Parse(den.Text);
+            
             if (bpd.Text != "" && den.Text != "")
             {
+                double bp = int.Parse(bpd.Text);
+                double de = int.Parse(den.Text);
                 double tp;
                 tp = bp * 0.0001590 * de;
                 tpd.Text = tp.ToString();

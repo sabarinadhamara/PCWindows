@@ -30,6 +30,11 @@ namespace PCWINDOWS.UConverter
 
         private void Selection_Changed(object sender, SelectionChangedEventArgs e)
         {
+            Loaddata();
+        }
+
+        private void Loaddata()
+        {
             if (thermalconductivitypicker.SelectedIndex == 0)
             {
                 calcm.Text = "";
@@ -111,7 +116,11 @@ namespace PCWINDOWS.UConverter
                     kcal.Text = kc.ToString();
                 }
             }
+        }
 
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Loaddata();
         }
     }
 }
