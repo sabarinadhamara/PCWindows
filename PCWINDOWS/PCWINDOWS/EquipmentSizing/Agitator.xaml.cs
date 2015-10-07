@@ -55,11 +55,11 @@ namespace PCWINDOWS.EquipmentSizing
             }
             else
             {
-                power.Text = Pwr.ToString();
+                power.Text = Math.Round(Pwr,5, MidpointRounding.AwayFromZero).ToString();
 
             }
-            imptipvelocity.Text = impv.ToString();
-            turnover.Text = turnover1.ToString();
+            imptipvelocity.Text =Math.Round( impv,5, MidpointRounding.AwayFromZero).ToString();
+            turnover.Text =Math.Round( turnover1,5, MidpointRounding.AwayFromZero).ToString();
         }
 
         private double impellervelocity(double Dam, double n)

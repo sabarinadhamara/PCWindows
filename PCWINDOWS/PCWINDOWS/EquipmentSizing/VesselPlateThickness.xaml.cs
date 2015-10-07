@@ -57,14 +57,14 @@ namespace PCWINDOWS.EquipmentSizing
                 P1 = (dimm * pm);
                 P2 = ((2 * fbar * 0.75 - pm));
                 platethickness = P1 / (P2) + c1;
-                thickness.Text = platethickness.ToString();
+                thickness.Text = Math.Round(platethickness,5, MidpointRounding.AwayFromZero).ToString();
             }
             else 
             {
                 P1 = (dimm * pm);
                 P2 = ((2 * fbar * 0.85 - pm));
                 platethickness = P1 / (P2) + c1;
-                thickness.Text = platethickness.ToString();
+                thickness.Text = Math.Round(platethickness, 5, MidpointRounding.AwayFromZero).ToString();
             }
 
 

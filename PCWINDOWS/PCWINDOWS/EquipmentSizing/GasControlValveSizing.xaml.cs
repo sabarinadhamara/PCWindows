@@ -48,7 +48,7 @@ namespace PCWINDOWS.EquipmentSizing
             xt=0.75;
             yvalue=Y(xvalue,kvalue,xt);
             Weight=wg(Cv1,P1kpa,yvalue,xvalue,mw,inletk,comp);
-            flowrate.Text = Weight.ToString();
+            flowrate.Text = Math.Round(Weight,5, MidpointRounding.AwayFromZero).ToString();
         }
 
         private double wg(double Cv1, double P1kpa, double yvalue, double xvalue, double mw, double inletk, double comp)

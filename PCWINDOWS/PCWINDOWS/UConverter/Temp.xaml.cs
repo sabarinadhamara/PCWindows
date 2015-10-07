@@ -50,14 +50,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double ce = int.Parse(temparature.Text);
+                    double ce = double.Parse(temparature.Text);
                     double fh = (ce * 1.8000) + 32.00;
                     double ra = (ce * 1.8000) + 491.67;
                     double kel = ce + 273.15;
-                    cels.Text = ce.ToString();
-                    faren.Text = fh.ToString();
-                    rank.Text = ra.ToString();
-                    kelv.Text = kel.ToString();
+                    cels.Text = Math.Round(ce,5).ToString();
+                    faren.Text = Math.Round(fh,5).ToString();
+                    rank.Text = Math.Round(ra,5).ToString();
+                    kelv.Text = Math.Round(kel,5).ToString();
                 }
             }
 
@@ -69,14 +69,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double fh = int.Parse(temparature.Text);
+                    double fh = double.Parse(temparature.Text);
                     double ce = (fh - 32.00) / (1.800);
                     double ra = (ce * 1.8000) + 491.67;
                     double kel = ce + 273.15;
-                    cels.Text = ce.ToString();
-                    faren.Text = fh.ToString();
-                    rank.Text = ra.ToString();
-                    kelv.Text = kel.ToString();
+                    cels.Text = Math.Round(ce, 5).ToString();
+                    faren.Text = Math.Round(fh, 5).ToString();
+                    rank.Text = Math.Round(ra, 5).ToString();
+                    kelv.Text = Math.Round(kel, 5).ToString();
                 }
             }
 
@@ -88,14 +88,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double ra = int.Parse(temparature.Text);
+                    double ra = double.Parse(temparature.Text);
                     double ce = (ra - 491.67) / (1.800);
                     double fh = (ce * 1.8000) + 32.00;
                     double kel = ce + 273.15;
-                    cels.Text = ce.ToString();
-                    faren.Text = fh.ToString();
-                    rank.Text = ra.ToString();
-                    kelv.Text = kel.ToString();
+                    cels.Text = Math.Round(ce, 5).ToString();
+                    faren.Text = Math.Round(fh, 5).ToString();
+                    rank.Text = Math.Round(ra, 5).ToString();
+                    kelv.Text = Math.Round(kel, 5).ToString();
                 }
             }
 
@@ -107,14 +107,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double kel = int.Parse(temparature.Text);
+                    double kel = double.Parse(temparature.Text);
                     double ce = kel - 273.15;
                     double fh = (ce * 1.8000) + 32.00;
                     double ra = (ce * 1.8000) + 491.67;
-                    cels.Text = ce.ToString();
-                    faren.Text = fh.ToString();
-                    rank.Text = ra.ToString();
-                    kelv.Text = kel.ToString();
+                    cels.Text = Math.Round(ce, 5).ToString();
+                    faren.Text = Math.Round(fh, 5).ToString();
+                    rank.Text = Math.Round(ra, 5).ToString();
+                    kelv.Text = Math.Round(kel, 5).ToString();
                 }
             }
         }

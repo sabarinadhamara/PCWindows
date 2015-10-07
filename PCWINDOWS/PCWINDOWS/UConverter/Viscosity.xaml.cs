@@ -51,10 +51,10 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double c = int.Parse(viscosity.Text);
+                    double c = double.Parse(viscosity.Text);
                     double pa = c / 1000;
-                    cp.Text = c.ToString();
-                    pas.Text = pa.ToString();
+                    cp.Text = Math.Round(c,5).ToString();
+                    pas.Text = Math.Round(pa, 5).ToString();
                     cst.Text = "";
                     mms.Text = "";
                 }
@@ -67,10 +67,10 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double pa = int.Parse(viscosity.Text);
+                    double pa = double.Parse(viscosity.Text);
                     double c = pa * 1000;
-                    cp.Text = c.ToString();
-                    pas.Text = pa.ToString();
+                    cp.Text = Math.Round(c, 5).ToString();
+                    pas.Text = Math.Round(pa, 5).ToString();
                     cst.Text = "";
                     mms.Text = "";
                 }
@@ -84,7 +84,7 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double cs = int.Parse(viscosity.Text);
+                    double cs = double.Parse(viscosity.Text);
                     cp.Text = "";
                     pas.Text = "";
                     cst.Text = cs.ToString();
@@ -100,7 +100,7 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double mm = int.Parse(viscosity.Text);
+                    double mm = double.Parse(viscosity.Text);
                     cp.Text = "";
                     pas.Text = "";
                     cst.Text = mm.ToString();

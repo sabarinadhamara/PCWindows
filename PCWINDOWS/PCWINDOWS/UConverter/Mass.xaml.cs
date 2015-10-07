@@ -50,14 +50,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double mm = int.Parse(mass.Text);
+                    double mm = double.Parse(mass.Text);
                     double g = mm * 0.001;
                     double kg = mm * 0.000001;
                     double po = mm * 0.000002204622621849;
-                    milli.Text = mm.ToString();
-                    gram.Text = g.ToString();
-                    kilo.Text = kg.ToString();
-                    pound.Text = po.ToString();
+                    milli.Text = Math.Round(mm,5).ToString();
+                    gram.Text = Math.Round(g,5).ToString();
+                    kilo.Text = Math.Round(kg,5).ToString();
+                    pound.Text = Math.Round(po,5).ToString();
                 }
             }
 
@@ -69,14 +69,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double g = int.Parse(mass.Text);
+                    double g = double.Parse(mass.Text);
                     double mm = g / 0.001;
                     double kg = mm * 0.000001;
                     double po = mm * 0.000002204622621849;
-                    milli.Text = mm.ToString();
-                    gram.Text = g.ToString();
-                    kilo.Text = kg.ToString();
-                    pound.Text = po.ToString();
+                    milli.Text = Math.Round(mm, 5).ToString();
+                    gram.Text = Math.Round(g, 5).ToString();
+                    kilo.Text = Math.Round(kg, 5).ToString();
+                    pound.Text = Math.Round(po, 5).ToString();
                 }
             }
 
@@ -88,14 +88,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double kg = int.Parse(mass.Text);
+                    double kg = double.Parse(mass.Text);
                     double mm = kg / 0.000001;
                     double g = mm * 0.001;
                     double po = mm * 0.000002204622621849;
-                    milli.Text = mm.ToString();
-                    gram.Text = g.ToString();
-                    kilo.Text = kg.ToString();
-                    pound.Text = po.ToString();
+                    milli.Text = Math.Round(mm, 5).ToString();
+                    gram.Text = Math.Round(g, 5).ToString();
+                    kilo.Text = Math.Round(kg, 5).ToString();
+                    pound.Text = Math.Round(po, 5).ToString();
                 }
             }
 
@@ -107,14 +107,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double po = int.Parse(mass.Text);
+                    double po = double.Parse(mass.Text);
                     double mm = po / 0.000002204622621849;
                     double g = mm * 0.001;
                     double kg = mm * 0.000001;
-                    milli.Text = mm.ToString();
-                    gram.Text = g.ToString();
-                    kilo.Text = kg.ToString();
-                    pound.Text = po.ToString();
+                    milli.Text = Math.Round(mm, 5).ToString();
+                    gram.Text = Math.Round(g, 5).ToString();
+                    kilo.Text = Math.Round(kg, 5).ToString();
+                    pound.Text = Math.Round(po, 5).ToString();
                 }
             }
         }

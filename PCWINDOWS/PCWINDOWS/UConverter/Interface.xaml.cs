@@ -68,5 +68,11 @@ namespace PCWINDOWS.UConverter
               if (StateListBox.SelectedItem.Equals("Concentration Units"))
                   NavigationService.Navigate(new Uri("/UConverter/ConcentrationUnits.xaml", UriKind.Relative));
         }
+
+          private void back_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+          {
+              NavigationService.GoBack();
+          }
+
     }
 }

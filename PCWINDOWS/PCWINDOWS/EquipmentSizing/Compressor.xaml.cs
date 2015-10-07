@@ -51,9 +51,9 @@ namespace PCWINDOWS.EquipmentSizing
     
             double otc=ot-273;
 
-            outtemp.Text = otc.ToString();
-            head.Text = h.ToString();
-            power.Text = Pwr.ToString();
+            outtemp.Text = Math.Round (otc,5, MidpointRounding.AwayFromZero).ToString();
+            head.Text = Math.Round(h,5, MidpointRounding.AwayFromZero).ToString();
+            power.Text = Math.Round(Pwr,5, MidpointRounding.AwayFromZero).ToString();
 
         }
 

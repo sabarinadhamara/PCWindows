@@ -54,18 +54,18 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double cm = int.Parse(volume.Text);
+                    double cm = double.Parse(volume.Text);
                     double cf = cm * 35.31466672149;
                     double ci = cm * 61023.74409473;
                     double lt = cm * 1000;
                     double ga = cm * 219.9692482991;
                     double ba = cm * 6.289810770432;
-                    cm3.Text = cm.ToString();
-                    cf3.Text = cf.ToString();
-                    ci3.Text = ci.ToString();
-                    litre.Text = lt.ToString();
-                    gallon.Text = ga.ToString();
-                    barrel.Text = ba.ToString();
+                    cm3.Text = Math.Round(cm,5).ToString();
+                    cf3.Text = Math.Round(cf,5).ToString();
+                    ci3.Text = Math.Round(ci,5).ToString();
+                    litre.Text = Math.Round(lt,5).ToString();
+                    gallon.Text = Math.Round(ga,5).ToString();
+                    barrel.Text = Math.Round(ba,5).ToString();
                 }
             }
 
@@ -77,18 +77,18 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double cf = int.Parse(volume.Text);
+                    double cf = double.Parse(volume.Text);
                     double cm = cf / 35.31466672149;
                     double ci = cm * 61023.74409473;
                     double lt = cm * 1000;
                     double ga = cm * 219.9692482991;
                     double ba = cm * 6.289810770432;
-                    cm3.Text = cm.ToString();
-                    cf3.Text = cf.ToString();
-                    ci3.Text = ci.ToString();
-                    litre.Text = lt.ToString();
-                    gallon.Text = ga.ToString();
-                    barrel.Text = ba.ToString();
+                    cm3.Text = Math.Round(cm, 5).ToString();
+                    cf3.Text = Math.Round(cf, 5).ToString();
+                    ci3.Text = Math.Round(ci, 5).ToString();
+                    litre.Text = Math.Round(lt, 5).ToString();
+                    gallon.Text = Math.Round(ga, 5).ToString();
+                    barrel.Text = Math.Round(ba, 5).ToString();
                 }
             }
             if (volumepicker.SelectedIndex == 3)
@@ -99,18 +99,18 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double ci = int.Parse(volume.Text);
+                    double ci = double.Parse(volume.Text);
                     double cm = ci / 61023.74409473;
                     double cf = cm * 35.31466672149;
                     double lt = cm * 1000;
                     double ga = cm * 219.9692482991;
                     double ba = cm * 6.289810770432;
-                    cm3.Text = cm.ToString();
-                    cf3.Text = cf.ToString();
-                    ci3.Text = ci.ToString();
-                    litre.Text = lt.ToString();
-                    gallon.Text = ga.ToString();
-                    barrel.Text = ba.ToString();
+                    cm3.Text = Math.Round(cm, 5).ToString();
+                    cf3.Text = Math.Round(cf, 5).ToString();
+                    ci3.Text = Math.Round(ci, 5).ToString();
+                    litre.Text = Math.Round(lt, 5).ToString();
+                    gallon.Text = Math.Round(ga, 5).ToString();
+                    barrel.Text = Math.Round(ba, 5).ToString();
                 }
             }
             if (volumepicker.SelectedIndex == 4)
@@ -121,18 +121,18 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double lt = int.Parse(volume.Text);
+                    double lt = double.Parse(volume.Text);
                     double cm = lt / 1000;
                     double cf = cm * 35.31466672149;
                     double ci = cm * 61023.74409473;
                     double ga = cm * 219.9692482991;
                     double ba = cm * 6.289810770432;
-                    cm3.Text = cm.ToString();
-                    cf3.Text = cf.ToString();
-                    ci3.Text = ci.ToString();
-                    litre.Text = lt.ToString();
-                    gallon.Text = ga.ToString();
-                    barrel.Text = ba.ToString();
+                    cm3.Text = Math.Round(cm, 5).ToString();
+                    cf3.Text = Math.Round(cf, 5).ToString();
+                    ci3.Text = Math.Round(ci, 5).ToString();
+                    litre.Text = Math.Round(lt, 5).ToString();
+                    gallon.Text = Math.Round(ga, 5).ToString();
+                    barrel.Text = Math.Round(ba, 5).ToString();
                 }
             }
             if (volumepicker.SelectedIndex == 5)
@@ -143,18 +143,18 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double ga = int.Parse(volume.Text);
+                    double ga = double.Parse(volume.Text);
                     double cm = ga / 219.9692482991;
                     double cf = cm * 35.31466672149;
                     double ci = cm * 61023.74409473;
                     double lt = cm * 1000;
                     double ba = cm * 6.289810770432;
-                    cm3.Text = cm.ToString();
-                    cf3.Text = cf.ToString();
-                    ci3.Text = ci.ToString();
-                    litre.Text = lt.ToString();
-                    gallon.Text = ga.ToString();
-                    barrel.Text = ba.ToString();
+                    cm3.Text = Math.Round(cm, 5).ToString();
+                    cf3.Text = Math.Round(cf, 5).ToString();
+                    ci3.Text = Math.Round(ci, 5).ToString();
+                    litre.Text = Math.Round(lt, 5).ToString();
+                    gallon.Text = Math.Round(ga, 5).ToString();
+                    barrel.Text = Math.Round(ba, 5).ToString();
                 }
             }
             if (volumepicker.SelectedIndex == 6)
@@ -165,18 +165,18 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double ba = int.Parse(volume.Text);
+                    double ba = double.Parse(volume.Text);
                     double cm = ba / 6.289810770432;
                     double cf = cm * 35.31466672149;
                     double ci = cm * 61023.74409473;
                     double lt = cm * 1000;
                     double ga = cm * 219.9692482991;
-                    cm3.Text = cm.ToString();
-                    cf3.Text = cf.ToString();
-                    ci3.Text = ci.ToString();
-                    litre.Text = lt.ToString();
-                    gallon.Text = ga.ToString();
-                    barrel.Text = ba.ToString();
+                    cm3.Text = Math.Round(cm, 5).ToString();
+                    cf3.Text = Math.Round(cf, 5).ToString();
+                    ci3.Text = Math.Round(ci, 5).ToString();
+                    litre.Text = Math.Round(lt, 5).ToString();
+                    gallon.Text = Math.Round(ga, 5).ToString();
+                    barrel.Text = Math.Round(ba, 5).ToString();
                 }
             }
         }

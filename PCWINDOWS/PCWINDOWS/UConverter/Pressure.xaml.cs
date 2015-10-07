@@ -63,7 +63,7 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double at = int.Parse(pressure.Text);
+                    double at = double.Parse(pressure.Text);
                     double ba = at * 1.01325;
                     double mm = at * 760;
                     double p = at * 101325;
@@ -74,17 +74,17 @@ namespace PCWINDOWS.UConverter
                     double ps = at * 14.6959487755134;
                     double cmw = at * 1033.227452799886;
                     double kgc = at * 1.033227452799886;
-                    atm.Text = at.ToString();
-                    bar.Text = ba.ToString();
-                    mmhg.Text = mm.ToString();
-                    pa.Text = p.ToString();
-                    Mpa.Text = mpa.ToString();
-                    Kpa.Text = kpa.ToString();
-                    dyne.Text = dy.ToString();
-                    Lb.Text = lb.ToString();
-                    psi.Text = ps.ToString();
-                    CmW.Text = cmw.ToString();
-                    kg.Text = kgc.ToString();
+                    atm.Text = Math.Round(at,5).ToString();
+                    bar.Text = Math.Round( ba,5).ToString();
+                    mmhg.Text = Math.Round(mm,5).ToString();
+                    pa.Text = Math.Round(p,5).ToString();
+                    Mpa.Text = Math.Round(mpa,5).ToString();
+                    Kpa.Text = Math.Round(kpa,5).ToString();
+                    dyne.Text = Math.Round(dy,5).ToString();
+                    Lb.Text = Math.Round(lb,5).ToString();
+                    psi.Text = Math.Round(ps,5).ToString();
+                    CmW.Text = Math.Round(cmw,5).ToString();
+                    kg.Text = Math.Round(kgc,5).ToString();
                 }
             }
 
@@ -96,7 +96,7 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double ba = int.Parse(pressure.Text);
+                    double ba = double.Parse(pressure.Text);
                     double at = ba / 1.01325;
                     double mm = at * 760;
                     double p = at * 101325;
@@ -107,17 +107,17 @@ namespace PCWINDOWS.UConverter
                     double ps = at * 14.6959487755134;
                     double cmw = at * 1033.227452799886;
                     double kgc = at * 1.033227452799886;
-                    atm.Text = at.ToString();
-                    bar.Text = ba.ToString();
-                    mmhg.Text = mm.ToString();
-                    pa.Text = p.ToString();
-                    Mpa.Text = mpa.ToString();
-                    Kpa.Text = kpa.ToString();
-                    dyne.Text = dy.ToString();
-                    Lb.Text = lb.ToString();
-                    psi.Text = ps.ToString();
-                    CmW.Text = cmw.ToString();
-                    kg.Text = kgc.ToString();
+                    atm.Text = Math.Round(at, 5).ToString();
+                    bar.Text = Math.Round(ba, 5).ToString();
+                    mmhg.Text = Math.Round(mm, 5).ToString();
+                    pa.Text = Math.Round(p, 5).ToString();
+                    Mpa.Text = Math.Round(mpa, 5).ToString();
+                    Kpa.Text = Math.Round(kpa, 5).ToString();
+                    dyne.Text = Math.Round(dy, 5).ToString();
+                    Lb.Text = Math.Round(lb, 5).ToString();
+                    psi.Text = Math.Round(ps, 5).ToString();
+                    CmW.Text = Math.Round(cmw, 5).ToString();
+                    kg.Text = Math.Round(kgc, 5).ToString();
                 }
             }
 
@@ -129,7 +129,7 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double mm = int.Parse(pressure.Text);
+                    double mm = double.Parse(pressure.Text);
                     double at = mm / 760;
                     double ba = at * 1.01325;
                     double p = at * 101325;
@@ -140,17 +140,17 @@ namespace PCWINDOWS.UConverter
                     double ps = at * 14.6959487755134;
                     double cmw = at * 1033.227452799886;
                     double kgc = at * 1.033227452799886;
-                    atm.Text = at.ToString();
-                    bar.Text = ba.ToString();
-                    mmhg.Text = mm.ToString();
-                    pa.Text = p.ToString();
-                    Mpa.Text = mpa.ToString();
-                    Kpa.Text = kpa.ToString();
-                    dyne.Text = dy.ToString();
-                    Lb.Text = lb.ToString();
-                    psi.Text = ps.ToString();
-                    CmW.Text = cmw.ToString();
-                    kg.Text = kgc.ToString();
+                    atm.Text = Math.Round(at, 5).ToString();
+                    bar.Text = Math.Round(ba, 5).ToString();
+                    mmhg.Text = Math.Round(mm, 5).ToString();
+                    pa.Text = Math.Round(p, 5).ToString();
+                    Mpa.Text = Math.Round(mpa, 5).ToString();
+                    Kpa.Text = Math.Round(kpa, 5).ToString();
+                    dyne.Text = Math.Round(dy, 5).ToString();
+                    Lb.Text = Math.Round(lb, 5).ToString();
+                    psi.Text = Math.Round(ps, 5).ToString();
+                    CmW.Text = Math.Round(cmw, 5).ToString();
+                    kg.Text = Math.Round(kgc, 5).ToString();
                 }
             }
 
@@ -162,7 +162,7 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double p = int.Parse(pressure.Text);
+                    double p = double.Parse(pressure.Text);
                     double at = p / 101325;
                     double ba = at * 1.01325;
                     double mm = at * 760;
@@ -173,17 +173,17 @@ namespace PCWINDOWS.UConverter
                     double ps = at * 14.6959487755134;
                     double cmw = at * 1033.227452799886;
                     double kgc = at * 1.033227452799886;
-                    atm.Text = at.ToString();
-                    bar.Text = ba.ToString();
-                    mmhg.Text = mm.ToString();
-                    pa.Text = p.ToString();
-                    Mpa.Text = mpa.ToString();
-                    Kpa.Text = kpa.ToString();
-                    dyne.Text = dy.ToString();
-                    Lb.Text = lb.ToString();
-                    psi.Text = ps.ToString();
-                    CmW.Text = cmw.ToString();
-                    kg.Text = kgc.ToString();
+                    atm.Text = Math.Round(at, 5).ToString();
+                    bar.Text = Math.Round(ba, 5).ToString();
+                    mmhg.Text = Math.Round(mm, 5).ToString();
+                    pa.Text = Math.Round(p, 5).ToString();
+                    Mpa.Text = Math.Round(mpa, 5).ToString();
+                    Kpa.Text = Math.Round(kpa, 5).ToString();
+                    dyne.Text = Math.Round(dy, 5).ToString();
+                    Lb.Text = Math.Round(lb, 5).ToString();
+                    psi.Text = Math.Round(ps, 5).ToString();
+                    CmW.Text = Math.Round(cmw, 5).ToString();
+                    kg.Text = Math.Round(kgc, 5).ToString();
                 }
             }
 
@@ -195,7 +195,7 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double mpa = int.Parse(pressure.Text);
+                    double mpa = double.Parse(pressure.Text);
                     double at = mpa / 0.101325;
                     double ba = at * 1.01325;
                     double mm = at * 760;
@@ -206,17 +206,17 @@ namespace PCWINDOWS.UConverter
                     double ps = at * 14.6959487755134;
                     double cmw = at * 1033.227452799886;
                     double kgc = at * 1.033227452799886;
-                    atm.Text = at.ToString();
-                    bar.Text = ba.ToString();
-                    mmhg.Text = mm.ToString();
-                    pa.Text = p.ToString();
-                    Mpa.Text = mpa.ToString();
-                    Kpa.Text = kpa.ToString();
-                    dyne.Text = dy.ToString();
-                    Lb.Text = lb.ToString();
-                    psi.Text = ps.ToString();
-                    CmW.Text = cmw.ToString();
-                    kg.Text = kgc.ToString();
+                    atm.Text = Math.Round(at, 5).ToString();
+                    bar.Text = Math.Round(ba, 5).ToString();
+                    mmhg.Text = Math.Round(mm, 5).ToString();
+                    pa.Text = Math.Round(p, 5).ToString();
+                    Mpa.Text = Math.Round(mpa, 5).ToString();
+                    Kpa.Text = Math.Round(kpa, 5).ToString();
+                    dyne.Text = Math.Round(dy, 5).ToString();
+                    Lb.Text = Math.Round(lb, 5).ToString();
+                    psi.Text = Math.Round(ps, 5).ToString();
+                    CmW.Text = Math.Round(cmw, 5).ToString();
+                    kg.Text = Math.Round(kgc, 5).ToString();
                 }
             }
 
@@ -228,7 +228,7 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double kpa = int.Parse(pressure.Text);
+                    double kpa = double.Parse(pressure.Text);
                     double at = kpa / 101.325;
                     double ba = at * 1.01325;
                     double mm = at * 760;
@@ -239,17 +239,17 @@ namespace PCWINDOWS.UConverter
                     double ps = at * 14.6959487755134;
                     double cmw = at * 1033.227452799886;
                     double kgc = at * 1.033227452799886;
-                    atm.Text = at.ToString();
-                    bar.Text = ba.ToString();
-                    mmhg.Text = mm.ToString();
-                    pa.Text = p.ToString();
-                    Mpa.Text = mpa.ToString();
-                    Kpa.Text = kpa.ToString();
-                    dyne.Text = dy.ToString();
-                    Lb.Text = lb.ToString();
-                    psi.Text = ps.ToString();
-                    CmW.Text = cmw.ToString();
-                    kg.Text = kgc.ToString();
+                    atm.Text = Math.Round(at, 5).ToString();
+                    bar.Text = Math.Round(ba, 5).ToString();
+                    mmhg.Text = Math.Round(mm, 5).ToString();
+                    pa.Text = Math.Round(p, 5).ToString();
+                    Mpa.Text = Math.Round(mpa, 5).ToString();
+                    Kpa.Text = Math.Round(kpa, 5).ToString();
+                    dyne.Text = Math.Round(dy, 5).ToString();
+                    Lb.Text = Math.Round(lb, 5).ToString();
+                    psi.Text = Math.Round(ps, 5).ToString();
+                    CmW.Text = Math.Round(cmw, 5).ToString();
+                    kg.Text = Math.Round(kgc, 5).ToString();
                 }
             }
 
@@ -261,7 +261,7 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double dy = int.Parse(pressure.Text);
+                    double dy = double.Parse(pressure.Text);
                     double at = dy / 10132.50;
                     double ba = at * 1.01325;
                     double mm = at * 760;
@@ -272,17 +272,17 @@ namespace PCWINDOWS.UConverter
                     double ps = at * 14.6959487755134;
                     double cmw = at * 1033.227452799886;
                     double kgc = at * 1.033227452799886;
-                    atm.Text = at.ToString();
-                    bar.Text = ba.ToString();
-                    mmhg.Text = mm.ToString();
-                    pa.Text = p.ToString();
-                    Mpa.Text = mpa.ToString();
-                    Kpa.Text = kpa.ToString();
-                    dyne.Text = dy.ToString();
-                    Lb.Text = lb.ToString();
-                    psi.Text = ps.ToString();
-                    CmW.Text = cmw.ToString();
-                    kg.Text = kgc.ToString();
+                    atm.Text = Math.Round(at, 5).ToString();
+                    bar.Text = Math.Round(ba, 5).ToString();
+                    mmhg.Text = Math.Round(mm, 5).ToString();
+                    pa.Text = Math.Round(p, 5).ToString();
+                    Mpa.Text = Math.Round(mpa, 5).ToString();
+                    Kpa.Text = Math.Round(kpa, 5).ToString();
+                    dyne.Text = Math.Round(dy, 5).ToString();
+                    Lb.Text = Math.Round(lb, 5).ToString();
+                    psi.Text = Math.Round(ps, 5).ToString();
+                    CmW.Text = Math.Round(cmw, 5).ToString();
+                    kg.Text = Math.Round(kgc, 5).ToString();
                 }
             }
 
@@ -294,7 +294,7 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double lb = int.Parse(pressure.Text);
+                    double lb = double.Parse(pressure.Text);
                     double at = lb / 2116.220402;
                     double ba = at * 1.01325;
                     double mm = at * 760;
@@ -305,17 +305,17 @@ namespace PCWINDOWS.UConverter
                     double ps = at * 14.6959487755134;
                     double cmw = at * 1033.227452799886;
                     double kgc = at * 1.033227452799886;
-                    atm.Text = at.ToString();
-                    bar.Text = ba.ToString();
-                    mmhg.Text = mm.ToString();
-                    pa.Text = p.ToString();
-                    Mpa.Text = mpa.ToString();
-                    Kpa.Text = kpa.ToString();
-                    dyne.Text = dy.ToString();
-                    Lb.Text = lb.ToString();
-                    psi.Text = ps.ToString();
-                    CmW.Text = cmw.ToString();
-                    kg.Text = kgc.ToString();
+                    atm.Text = Math.Round(at, 5).ToString();
+                    bar.Text = Math.Round(ba, 5).ToString();
+                    mmhg.Text = Math.Round(mm, 5).ToString();
+                    pa.Text = Math.Round(p, 5).ToString();
+                    Mpa.Text = Math.Round(mpa, 5).ToString();
+                    Kpa.Text = Math.Round(kpa, 5).ToString();
+                    dyne.Text = Math.Round(dy, 5).ToString();
+                    Lb.Text = Math.Round(lb, 5).ToString();
+                    psi.Text = Math.Round(ps, 5).ToString();
+                    CmW.Text = Math.Round(cmw, 5).ToString();
+                    kg.Text = Math.Round(kgc, 5).ToString();
                 }
             }
 
@@ -327,7 +327,7 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double ps = int.Parse(pressure.Text);
+                    double ps = double.Parse(pressure.Text);
                     double at = ps / 14.6959487755134;
                     double ba = at * 1.01325;
                     double mm = at * 760;
@@ -338,17 +338,17 @@ namespace PCWINDOWS.UConverter
                     double lb = at * 2116.220402;
                     double cmw = at * 1033.227452799886;
                     double kgc = at * 1.033227452799886;
-                    atm.Text = at.ToString();
-                    bar.Text = ba.ToString();
-                    mmhg.Text = mm.ToString();
-                    pa.Text = p.ToString();
-                    Mpa.Text = mpa.ToString();
-                    Kpa.Text = kpa.ToString();
-                    dyne.Text = dy.ToString();
-                    Lb.Text = lb.ToString();
-                    psi.Text = ps.ToString();
-                    CmW.Text = cmw.ToString();
-                    kg.Text = kgc.ToString();
+                    atm.Text = Math.Round(at, 5).ToString();
+                    bar.Text = Math.Round(ba, 5).ToString();
+                    mmhg.Text = Math.Round(mm, 5).ToString();
+                    pa.Text = Math.Round(p, 5).ToString();
+                    Mpa.Text = Math.Round(mpa, 5).ToString();
+                    Kpa.Text = Math.Round(kpa, 5).ToString();
+                    dyne.Text = Math.Round(dy, 5).ToString();
+                    Lb.Text = Math.Round(lb, 5).ToString();
+                    psi.Text = Math.Round(ps, 5).ToString();
+                    CmW.Text = Math.Round(cmw, 5).ToString();
+                    kg.Text = Math.Round(kgc, 5).ToString();
                 }
             }
 
@@ -360,7 +360,7 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double cmw = int.Parse(pressure.Text);
+                    double cmw = double.Parse(pressure.Text);
                     double at = cmw / 1033.227452799886;
                     double ba = at * 1.01325;
                     double mm = at * 760;
@@ -371,17 +371,17 @@ namespace PCWINDOWS.UConverter
                     double lb = at * 2116.220402;
                     double ps = at * 14.6959487755134;
                     double kgc = at * 1.033227452799886;
-                    atm.Text = at.ToString();
-                    bar.Text = ba.ToString();
-                    mmhg.Text = mm.ToString();
-                    pa.Text = p.ToString();
-                    Mpa.Text = mpa.ToString();
-                    Kpa.Text = kpa.ToString();
-                    dyne.Text = dy.ToString();
-                    Lb.Text = lb.ToString();
-                    psi.Text = ps.ToString();
-                    CmW.Text = cmw.ToString();
-                    kg.Text = kgc.ToString();
+                    atm.Text = Math.Round(at, 5).ToString();
+                    bar.Text = Math.Round(ba, 5).ToString();
+                    mmhg.Text = Math.Round(mm, 5).ToString();
+                    pa.Text = Math.Round(p, 5).ToString();
+                    Mpa.Text = Math.Round(mpa, 5).ToString();
+                    Kpa.Text = Math.Round(kpa, 5).ToString();
+                    dyne.Text = Math.Round(dy, 5).ToString();
+                    Lb.Text = Math.Round(lb, 5).ToString();
+                    psi.Text = Math.Round(ps, 5).ToString();
+                    CmW.Text = Math.Round(cmw, 5).ToString();
+                    kg.Text = Math.Round(kgc, 5).ToString();
                 }
             }
 
@@ -393,7 +393,7 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double kgc = int.Parse(pressure.Text);
+                    double kgc = double.Parse(pressure.Text);
                     double at = kgc * 1.033227452799886;
                     double ba = at * 1.01325;
                     double mm = at * 760;
@@ -404,17 +404,17 @@ namespace PCWINDOWS.UConverter
                     double lb = at * 2116.220402;
                     double ps = at * 14.6959487755134;
                     double cmw = at * 1033.227452799886;
-                    atm.Text = at.ToString();
-                    bar.Text = ba.ToString();
-                    mmhg.Text = mm.ToString();
-                    pa.Text = p.ToString();
-                    Mpa.Text = mpa.ToString();
-                    Kpa.Text = kpa.ToString();
-                    dyne.Text = dy.ToString();
-                    Lb.Text = lb.ToString();
-                    psi.Text = ps.ToString();
-                    CmW.Text = cmw.ToString();
-                    kg.Text = kgc.ToString();
+                    atm.Text = Math.Round(at, 5).ToString();
+                    bar.Text = Math.Round(ba, 5).ToString();
+                    mmhg.Text = Math.Round(mm, 5).ToString();
+                    pa.Text = Math.Round(p, 5).ToString();
+                    Mpa.Text = Math.Round(mpa, 5).ToString();
+                    Kpa.Text = Math.Round(kpa, 5).ToString();
+                    dyne.Text = Math.Round(dy, 5).ToString();
+                    Lb.Text = Math.Round(lb, 5).ToString();
+                    psi.Text = Math.Round(ps, 5).ToString();
+                    CmW.Text = Math.Round(cmw, 5).ToString();
+                    kg.Text = Math.Round(kgc, 5).ToString();
                 }
             }
         }

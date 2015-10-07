@@ -54,18 +54,18 @@ namespace PCWINDOWS
                 }
                 else
                 {
-                    double ac = int.Parse(area.Text);
+                    double ac = double.Parse(area.Text);
                     double inch = ac * 6272600;
                     double foot = ac * 43560;
                     double meter = ac * 4046.856422;
                     double hct = ac * 0.4046856422;
-                    double ar = ac / 40.4685642;
-                    acre.Text = ac.ToString();
-                    insq.Text = inch.ToString();
-                    ftsq.Text = foot.ToString();
-                    are.Text = ar.ToString();
-                    mtsq.Text = meter.ToString();
-                    hect.Text = hct.ToString();
+                    double ar = ac / 0.0247105;
+                    acre.Text = Math.Round(ac, 5, MidpointRounding.AwayFromZero).ToString();
+                    insq.Text = Math.Round(inch, 5, MidpointRounding.AwayFromZero).ToString();
+                    ftsq.Text = Math.Round(foot, 5, MidpointRounding.AwayFromZero).ToString();
+                    are.Text = Math.Round(ar, 5, MidpointRounding.AwayFromZero).ToString();
+                    mtsq.Text = Math.Round(meter, 5, MidpointRounding.AwayFromZero).ToString();
+                    hect.Text = Math.Round(hct, 5, MidpointRounding.AwayFromZero).ToString();
                 }
             }
 
@@ -77,18 +77,18 @@ namespace PCWINDOWS
                 }
                 else
                 {
-                    double inch = int.Parse(area.Text);
+                    double inch = double.Parse(area.Text);
                     double ac = inch / 6272600;
                     double foot = ac * 43560;
                     double meter = ac * 4046.856422;
                     double hct = ac * 0.4046856422;
-                    double ar = ac / 40.4685642;
-                    acre.Text = ac.ToString();
-                    insq.Text = inch.ToString();
-                    ftsq.Text = foot.ToString();
-                    are.Text = ar.ToString();
-                    mtsq.Text = meter.ToString();
-                    hect.Text = hct.ToString();
+                    double ar = ac / 0.0247105;
+                    acre.Text = Math.Round(ac, 5, MidpointRounding.AwayFromZero).ToString();
+                    insq.Text = Math.Round(inch, 5, MidpointRounding.AwayFromZero).ToString();
+                    ftsq.Text = Math.Round(foot, 5, MidpointRounding.AwayFromZero).ToString();
+                    are.Text = Math.Round(ar, 5, MidpointRounding.AwayFromZero).ToString();
+                    mtsq.Text = Math.Round(meter, 5, MidpointRounding.AwayFromZero).ToString();
+                    hect.Text = Math.Round(hct, 5, MidpointRounding.AwayFromZero).ToString();
                 }
             }
 
@@ -100,18 +100,18 @@ namespace PCWINDOWS
                 }
                 else
                 {
-                    double foot = int.Parse(area.Text);
+                    double foot = double.Parse(area.Text);
                     double ac = foot / 43560;
                     double inch = ac * 6272600;
                     double meter = ac * 4046.856422;
-                    double ar = ac / 40.4685642;
+                    double ar = ac / 0.0247105;
                     double hct = ac * 0.4046856422;
-                    acre.Text = ac.ToString();
-                    insq.Text = inch.ToString();
-                    ftsq.Text = foot.ToString();
-                    are.Text = ar.ToString();
-                    mtsq.Text = meter.ToString();
-                    hect.Text = hct.ToString();
+                    acre.Text = Math.Round(ac, 5, MidpointRounding.AwayFromZero).ToString();
+                    insq.Text = Math.Round(inch, 5, MidpointRounding.AwayFromZero).ToString();
+                    ftsq.Text = Math.Round(foot, 5, MidpointRounding.AwayFromZero).ToString();
+                    are.Text = Math.Round(ar, 5, MidpointRounding.AwayFromZero).ToString();
+                    mtsq.Text = Math.Round(meter, 5, MidpointRounding.AwayFromZero).ToString();
+                    hect.Text = Math.Round(hct, 5, MidpointRounding.AwayFromZero).ToString();
                 }
             }
 
@@ -123,18 +123,18 @@ namespace PCWINDOWS
                 }
                 else
                 {
-                    double ar = int.Parse(area.Text);
-                    double ac = ar * 40.4685642;
+                    double ar = double.Parse(area.Text);
+                    double ac = ar * 0.0247105;
                     double inch = ac * 6272600;
                     double foot = ac * 43560;
                     double meter = ac * 4046.856422;
                     double hct = ac * 0.4046856422;
-                    acre.Text = ac.ToString();
-                    insq.Text = inch.ToString();
-                    ftsq.Text = foot.ToString();
-                    are.Text = ar.ToString();
-                    mtsq.Text = meter.ToString();
-                    hect.Text = hct.ToString();
+                    acre.Text = Math.Round(ac, 5, MidpointRounding.AwayFromZero).ToString();
+                    insq.Text = Math.Round(inch, 5, MidpointRounding.AwayFromZero).ToString();
+                    ftsq.Text = Math.Round(foot, 5, MidpointRounding.AwayFromZero).ToString();
+                    are.Text = Math.Round(ar, 5, MidpointRounding.AwayFromZero).ToString();
+                    mtsq.Text = Math.Round(meter, 5, MidpointRounding.AwayFromZero).ToString();
+                    hect.Text = Math.Round(hct, 5, MidpointRounding.AwayFromZero).ToString();
                 }
             }
 
@@ -146,18 +146,18 @@ namespace PCWINDOWS
                 }
                 else
                 {
-                    double meter = int.Parse(area.Text);
+                    double meter = double.Parse(area.Text);
                     double ac = meter / 4046.856422;
                     double inch = ac * 6272600;
                     double foot = ac * 43560;
                     double hct = ac * 0.4046856422;
-                    double ar = ac / 40.4685642;
-                    acre.Text = ac.ToString();
-                    insq.Text = inch.ToString();
-                    ftsq.Text = foot.ToString();
-                    are.Text = ar.ToString();
-                    mtsq.Text = meter.ToString();
-                    hect.Text = hct.ToString();
+                    double ar = ac / 0.0247105;
+                    acre.Text = Math.Round(ac, 5, MidpointRounding.AwayFromZero).ToString();
+                    insq.Text = Math.Round(inch, 5, MidpointRounding.AwayFromZero).ToString();
+                    ftsq.Text = Math.Round(foot, 5, MidpointRounding.AwayFromZero).ToString();
+                    are.Text = Math.Round(ar, 5, MidpointRounding.AwayFromZero).ToString();
+                    mtsq.Text = Math.Round(meter, 5, MidpointRounding.AwayFromZero).ToString();
+                    hect.Text = Math.Round(hct, 5, MidpointRounding.AwayFromZero).ToString();
                 }
             }
 
@@ -169,18 +169,18 @@ namespace PCWINDOWS
                 }
                 else
                 {
-                    double hct = int.Parse(area.Text);
+                    double hct = double.Parse(area.Text);
                     double ac = hct / 0.4046856422;
                     double inch = ac * 6272600;
                     double foot = ac * 43560;
                     double meter = ac * 4046.856422;
-                    double ar = ac / 40.4685642;
-                    acre.Text = ac.ToString();
-                    insq.Text = inch.ToString();
-                    ftsq.Text = foot.ToString();
-                    are.Text = ar.ToString();
-                    mtsq.Text = meter.ToString();
-                    hect.Text = hct.ToString();
+                    double ar = ac / 0.0247105;
+                    acre.Text = Math.Round(ac, 5, MidpointRounding.AwayFromZero).ToString();
+                    insq.Text = Math.Round(inch, 5, MidpointRounding.AwayFromZero).ToString();
+                    ftsq.Text = Math.Round(foot, 5, MidpointRounding.AwayFromZero).ToString();
+                    are.Text = Math.Round(ar, 5, MidpointRounding.AwayFromZero).ToString();
+                    mtsq.Text = Math.Round(meter, 5, MidpointRounding.AwayFromZero).ToString();
+                    hect.Text = Math.Round(hct, 5, MidpointRounding.AwayFromZero).ToString();
                 }
             } 
         }
@@ -189,5 +189,14 @@ namespace PCWINDOWS
         {
             Loaddata();
         }
+
+       
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
+
+      
     }
 }

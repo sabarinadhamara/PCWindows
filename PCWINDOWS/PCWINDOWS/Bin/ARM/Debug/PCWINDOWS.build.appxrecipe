@@ -211,6 +211,9 @@
     <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\3sg.png">
       <PackagePath>Images\3sg.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\back.png">
+      <PackagePath>Images\back.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SabariNadh\documents\visual studio 2013\Projects\PCWINDOWS\PCWINDOWS\Images\cart_black.png">
       <PackagePath>Images\cart_black.png</PackagePath>
     </AppxPackagedFile>

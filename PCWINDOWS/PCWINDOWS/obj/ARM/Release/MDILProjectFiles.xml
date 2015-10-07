@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Files>
+  <XAPFiles>
+    <File>resources.pri</File>
+    <File>PCWINDOWS.dll</File>
+    <File>arrow.png</File>
+    <File>icon4.png</File>
+    <File>Images\3sg.png</File>
+    <File>Images\cart_black.png</File>
+    <File>Images\Lock.png</File>
+    <File>Images\purchase.png</File>
+    <File>Images\share.png</File>
+    <File>Images\tick_green.png</File>
+    <File>Logo170X170.jpg</File>
+    <File>SplashScreenImage.jpg</File>
+    <File>Tilewide.jpg</File>
+    <File>VAPDATA2.sqlite</File>
+    <File>mydata3.csv</File>
+    <File>phydata.sqlite</File>
+    <File>Assets\AlignmentGrid.png</File>
+    <File>Assets\ApplicationIcon.png</File>
+    <File>Assets\BadgeLogo.png</File>
+    <File>Assets\icon4.png</File>
+    <File>Assets\Logo.png</File>
+    <File>Assets\Splash.png</File>
+    <File>Assets\SplashScreen1.png</File>
+    <File>Assets\SquareTile150x150.png</File>
+    <File>Assets\SquareTile71x71.png</File>
+    <File>Assets\StoreLogo.png</File>
+    <File>Assets\WideLogo.png</File>
+    <File>Assets\Tiles\FlipCycleTileLarge.png</File>
+    <File>Assets\Tiles\FlipCycleTileMedium.png</File>
+    <File>Assets\Tiles\FlipCycleTileSmall.png</File>
+    <File>Assets\Tiles\IconicTileMediumLarge.png</File>
+    <File>Assets\Tiles\IconicTileSmall.png</File>
+    <File>Images\1.png</File>
+    <File>Images\3.png</File>
+    <File>Images\4s.png</File>
+    <File>Images\arrow.png</File>
+    <File>Images\mainbg.png</File>
+    <File>README_FIRST.txt</File>
+    <File>Toolkit.Content\ApplicationBar.Add.png</File>
+    <File>Toolkit.Content\ApplicationBar.Cancel.png</File>
+    <File>Toolkit.Content\ApplicationBar.Check.png</File>
+    <File>Toolkit.Content\ApplicationBar.Delete.png</File>
+    <File>Toolkit.Content\ApplicationBar.Select.png</File>
+    <File>AppManifest.xaml</File>
+    <File>Microsoft.Phone.Controls.dll</File>
+    <File>Microsoft.Phone.Controls.Maps.dll</File>
+    <File>Microsoft.Phone.Controls.Toolkit.dll</File>
+    <File>Mono.Data.Sqlite.dll</File>
+    <File>Sqlite.winmd</File>
+    <File>System.Data.Portable.dll</File>
+    <File Type="PCL">System.Transactions.Portable.dll</File>
+    <File>MonoDataSqliteWrapper.winmd</File>
+    <File>Sqlite.dll</File>
+    <File>MonoDataSqliteWrapper.dll</File>
+    <File>sqlite3.dll</File>
+    <File>Logo360X360.jpg</File>
+    <File>Images\icon4.png</File>
+    <File>WMAppManifest.xml</File>
+    <File>AppxManifest.xml</File>
+  </XAPFiles>
+  <APPXFiles />
+</Files>

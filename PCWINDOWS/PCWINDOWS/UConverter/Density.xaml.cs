@@ -18,6 +18,15 @@ namespace PCWINDOWS.UConverter
         public Density()
         {
             InitializeComponent();
+            items = new ObservableCollection<string>();
+            foreach (string str in itemsarray)
+                items.Add(str);
+            densitypicker.ItemsSource = items;
+            lbft.Text = "";
+            gcm.Text = "";
+            kgm.Text = "";
+            api.Text = "";
+            baume.Text = "";
         }
 
         private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
@@ -44,16 +53,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double lb = int.Parse(density.Text);
+                    double lb = double.Parse(density.Text);
                     double g = lb * (0.016018463306);
                     double k = lb * (16.018463306); ;
                     double a = lb * 8702.06;
                     double b = lb * 8609.92;
-                    lbft.Text = lb.ToString();
-                    gcm.Text = g.ToString();
-                    kgm.Text = k.ToString();
-                    api.Text = a.ToString();
-                    baume.Text = b.ToString();
+                    lbft.Text = Math.Round(lb,5).ToString();
+                    gcm.Text = Math.Round(g,5).ToString();
+                    kgm.Text = Math.Round(k,5).ToString();
+                    api.Text = Math.Round(a,5).ToString();
+                    baume.Text = Math.Round(b,5).ToString();
                 }
             }
             if (densitypicker.SelectedIndex == 2)
@@ -64,16 +73,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double g = int.Parse(density.Text);
+                    double g = double.Parse(density.Text);
                     double lb = g / (0.016018463306);
                     double k = lb * (16.018463306); ;
                     double a = lb * 8702.06;
                     double b = lb * 8609.92;
-                    lbft.Text = lb.ToString();
-                    gcm.Text = g.ToString();
-                    kgm.Text = k.ToString();
-                    api.Text = a.ToString();
-                    baume.Text = b.ToString();
+                    lbft.Text = Math.Round(lb, 5).ToString();
+                    gcm.Text = Math.Round(g, 5).ToString();
+                    kgm.Text = Math.Round(k, 5).ToString();
+                    api.Text = Math.Round(a, 5).ToString();
+                    baume.Text = Math.Round(b, 5).ToString();
                 }
             }
 
@@ -85,16 +94,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double k = int.Parse(density.Text);
+                    double k = double.Parse(density.Text);
                     double lb = k / (16.018463306); ;
                     double g = lb * (0.016018463306);
                     double a = lb * 8702.06;
                     double b = lb * 8609.92;
-                    lbft.Text = lb.ToString();
-                    gcm.Text = g.ToString();
-                    kgm.Text = k.ToString();
-                    api.Text = a.ToString();
-                    baume.Text = b.ToString();
+                    lbft.Text = Math.Round(lb, 5).ToString();
+                    gcm.Text = Math.Round(g, 5).ToString();
+                    kgm.Text = Math.Round(k, 5).ToString();
+                    api.Text = Math.Round(a, 5).ToString();
+                    baume.Text = Math.Round(b, 5).ToString();
                 }
             }
 
@@ -106,16 +115,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double a = int.Parse(density.Text);
+                    double a = double.Parse(density.Text);
                     double lb = a / 8702.06;
                     double g = lb * (0.016018463306);
                     double k = lb * (16.018463306); ;
                     double b = lb * 8609.92;
-                    lbft.Text = lb.ToString();
-                    gcm.Text = g.ToString();
-                    kgm.Text = k.ToString();
-                    api.Text = a.ToString();
-                    baume.Text = b.ToString();
+                    lbft.Text = Math.Round(lb, 5).ToString();
+                    gcm.Text = Math.Round(g, 5).ToString();
+                    kgm.Text = Math.Round(k, 5).ToString();
+                    api.Text = Math.Round(a, 5).ToString();
+                    baume.Text = Math.Round(b, 5).ToString();
                 }
             }
 
@@ -127,16 +136,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double b = int.Parse(density.Text);
+                    double b = double.Parse(density.Text);
                     double lb = b / 8609.92;
                     double g = lb * (0.016018463306);
                     double k = lb * (16.018463306); ;
                     double a = lb * 8702.06;
-                    lbft.Text = lb.ToString();
-                    gcm.Text = g.ToString();
-                    kgm.Text = k.ToString();
-                    api.Text = a.ToString();
-                    baume.Text = b.ToString();
+                    lbft.Text = Math.Round(lb, 5).ToString();
+                    gcm.Text = Math.Round(g, 5).ToString();
+                    kgm.Text = Math.Round(k, 5).ToString();
+                    api.Text = Math.Round(a, 5).ToString();
+                    baume.Text = Math.Round(b, 5).ToString();
                 }
             }
         }
@@ -145,6 +154,13 @@ namespace PCWINDOWS.UConverter
         {
             Loaddata();
         }
+
+      
+        private void back_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/UConverter/Interface.xaml", UriKind.Relative));
+        }
+       
 
     }
 }

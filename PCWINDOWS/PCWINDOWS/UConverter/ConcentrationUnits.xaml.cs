@@ -36,9 +36,10 @@ namespace PCWINDOWS.UConverter
 
             InitializeComponent();
             total.Text = "";
+            Loaddata();
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        private void Loaddata()
         {
             con.Open();
 
@@ -59,6 +60,11 @@ namespace PCWINDOWS.UConverter
             comppicker.ItemsSource = listA;
 
             seg1 = 0;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)

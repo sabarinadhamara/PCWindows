@@ -53,16 +53,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double cals = int.Parse(heattransfercoefficient.Text);
+                    double cals = double.Parse(heattransfercoefficient.Text);
                     double kcal = cals * 36000.01;
                     double kw = cals * 41.84;
                     double btus = cals * 2.047;
                     double btuh = cals * 7368.45;
-                    calsc.Text = cals.ToString();
-                    kcalh.Text = kcal.ToString();
-                    kwm.Text = kw.ToString();
-                    btusf.Text = btus.ToString();
-                    btuhf.Text = btuh.ToString();
+                    calsc.Text = Math.Round(cals,5).ToString();
+                    kcalh.Text =Math.Round( kcal,5).ToString();
+                    kwm.Text = Math.Round( kw,5).ToString();
+                    btusf.Text = Math.Round(btus,5).ToString();
+                    btuhf.Text = Math.Round(btuh,5).ToString();
                 }
             }
             if (heattransfercoefficientpicker.SelectedIndex == 2)
@@ -73,16 +73,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double kcal = int.Parse(heattransfercoefficient.Text);
+                    double kcal = double.Parse(heattransfercoefficient.Text);
                     double cals = kcal / 36000.01;
                     double kw = cals * 41.84;
                     double btus = cals * 2.047;
                     double btuh = cals * 7368.45;
-                    calsc.Text = cals.ToString();
-                    kcalh.Text = kcal.ToString();
-                    kwm.Text = kw.ToString();
-                    btusf.Text = btus.ToString();
-                    btuhf.Text = btuh.ToString();
+                    calsc.Text = Math.Round(cals, 5).ToString();
+                    kcalh.Text = Math.Round(kcal, 5).ToString();
+                    kwm.Text = Math.Round(kw, 5).ToString();
+                    btusf.Text = Math.Round(btus, 5).ToString();
+                    btuhf.Text = Math.Round(btuh, 5).ToString();
                 }
             }
             if (heattransfercoefficientpicker.SelectedIndex == 3)
@@ -93,16 +93,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double kw = int.Parse(heattransfercoefficient.Text);
+                    double kw = double.Parse(heattransfercoefficient.Text);
                     double cals = kw / 41.84;
                     double kcal = cals * 36000.01;
                     double btus = cals * 2.047;
                     double btuh = cals * 7368.45;
-                    calsc.Text = cals.ToString();
-                    kcalh.Text = kcal.ToString();
-                    kwm.Text = kw.ToString();
-                    btusf.Text = btus.ToString();
-                    btuhf.Text = btuh.ToString();
+                    calsc.Text = Math.Round(cals, 5).ToString();
+                    kcalh.Text = Math.Round(kcal, 5).ToString();
+                    kwm.Text = Math.Round(kw, 5).ToString();
+                    btusf.Text = Math.Round(btus, 5).ToString();
+                    btuhf.Text = Math.Round(btuh, 5).ToString();
                 }
             }
             if (heattransfercoefficientpicker.SelectedIndex == 4)
@@ -113,16 +113,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double btus = int.Parse(heattransfercoefficient.Text);
+                    double btus = double.Parse(heattransfercoefficient.Text);
                     double cals = btus / 2.047;
                     double kcal = cals * 36000.01;
                     double kw = cals * 41.84;
                     double btuh = cals * 7368.45;
-                    calsc.Text = cals.ToString();
-                    kcalh.Text = kcal.ToString();
-                    kwm.Text = kw.ToString();
-                    btusf.Text = btus.ToString();
-                    btuhf.Text = btuh.ToString();
+                    calsc.Text = Math.Round(cals, 5).ToString();
+                    kcalh.Text = Math.Round(kcal, 5).ToString();
+                    kwm.Text = Math.Round(kw, 5).ToString();
+                    btusf.Text = Math.Round(btus, 5).ToString();
+                    btuhf.Text = Math.Round(btuh, 5).ToString();
                 }
             }
             if (heattransfercoefficientpicker.SelectedIndex == 5)
@@ -133,16 +133,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double btuh = int.Parse(heattransfercoefficient.Text);
+                    double btuh = double.Parse(heattransfercoefficient.Text);
                     double cals = btuh / 7368.45;
                     double kcal = cals * 36000.01;
                     double kw = cals * 41.84;
                     double btus = cals * 2.047;
-                    calsc.Text = cals.ToString();
-                    kcalh.Text = kcal.ToString();
-                    kwm.Text = kw.ToString();
-                    btusf.Text = btus.ToString();
-                    btuhf.Text = btuh.ToString();
+                    calsc.Text = Math.Round(cals, 5).ToString();
+                    kcalh.Text = Math.Round(kcal, 5).ToString();
+                    kwm.Text = Math.Round(kw, 5).ToString();
+                    btusf.Text = Math.Round(btus, 5).ToString();
+                    btuhf.Text = Math.Round(btuh, 5).ToString();
                 }
             }
         }
@@ -150,6 +150,14 @@ namespace PCWINDOWS.UConverter
         private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             Loaddata();
+        }
+
+       
+
+        private void back_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            if (NavigationService.CanGoBack)
+            { NavigationService.GoBack(); }
         }
     }
 }

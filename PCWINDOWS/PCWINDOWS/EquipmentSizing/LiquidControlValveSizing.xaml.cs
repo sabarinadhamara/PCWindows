@@ -37,7 +37,7 @@ namespace PCWINDOWS.EquipmentSizing
             fpvalue = double.Parse(correcfac.Text);
             dpkpa = dp * 100;
             double Weight=wt(Cvvalue,fpvalue,dpkpa,gammavalue);
-            flowrate.Text = Weight.ToString();
+            flowrate.Text = Math.Round(Weight,5, MidpointRounding.AwayFromZero).ToString();
 
         }
 

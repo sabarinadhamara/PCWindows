@@ -29,9 +29,9 @@ namespace PCWINDOWS.EquipmentSizing
             headvl = (0.0809 * Math.Pow(d, 3)) * 1000;
             ttv = vlume + headvl;
 
-            totalvol.Text = ttv.ToString();
-            cylindvol.Text = vlume.ToString();
-            torvol.Text = headvl.ToString();
+            totalvol.Text = Math.Round(ttv, 5, MidpointRounding.AwayFromZero).ToString();
+            cylindvol.Text = Math.Round(vlume,5, MidpointRounding.AwayFromZero).ToString();
+            torvol.Text = Math.Round(headvl,5, MidpointRounding.AwayFromZero).ToString();
         }
 
        

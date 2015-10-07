@@ -51,14 +51,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double kwk = int.Parse(specificheat.Text);
+                    double kwk = double.Parse(specificheat.Text);
                     double bbm = kwk * 859.85;
                     double kck = kwk * 860.42;
                     double jg = kwk * 3600.00;
-                    kwkg.Text = kwk.ToString();
-                    btubm.Text = bbm.ToString();
-                    kcalkg.Text = kck.ToString();
-                    jgk.Text = jg.ToString();
+                    kwkg.Text = Math.Round( kwk,5).ToString();
+                    btubm.Text = Math.Round( bbm,5).ToString();
+                    kcalkg.Text = Math.Round(kck,5).ToString();
+                    jgk.Text = Math.Round(jg,5).ToString();
                 }
             }
             if (specificheatpicker.SelectedIndex == 2)
@@ -69,14 +69,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double bbm = int.Parse(specificheat.Text);
+                    double bbm = double.Parse(specificheat.Text);
                     double kwk = bbm / 859.85;
                     double kck = kwk * 860.42;
                     double jg = kwk * 3600.00;
-                    kwkg.Text = kwk.ToString();
-                    btubm.Text = bbm.ToString();
-                    kcalkg.Text = kck.ToString();
-                    jgk.Text = jg.ToString();
+                    kwkg.Text = Math.Round(kwk, 5).ToString();
+                    btubm.Text = Math.Round(bbm, 5).ToString();
+                    kcalkg.Text = Math.Round(kck, 5).ToString();
+                    jgk.Text = Math.Round(jg, 5).ToString();
                 }
             }
             if (specificheatpicker.SelectedIndex == 3)
@@ -87,14 +87,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double kck = int.Parse(specificheat.Text);
+                    double kck = double.Parse(specificheat.Text);
                     double kwk = kck / 860.42;
                     double bbm = kwk * 859.85;
                     double jg = kwk * 3600.00;
-                    kwkg.Text = kwk.ToString();
-                    btubm.Text = bbm.ToString();
-                    kcalkg.Text = kck.ToString();
-                    jgk.Text = jg.ToString();
+                    kwkg.Text = Math.Round(kwk, 5).ToString();
+                    btubm.Text = Math.Round(bbm, 5).ToString();
+                    kcalkg.Text = Math.Round(kck, 5).ToString();
+                    jgk.Text = Math.Round(jg, 5).ToString();
                 }
             }
             if (specificheatpicker.SelectedIndex == 4)
@@ -105,14 +105,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double jg = int.Parse(specificheat.Text);
+                    double jg = double.Parse(specificheat.Text);
                     double kwk = jg / 3600.00;
                     double bbm = kwk * 859.85;
                     double kck = kwk * 860.42;
-                    kwkg.Text = kwk.ToString();
-                    btubm.Text = bbm.ToString();
-                    kcalkg.Text = kck.ToString();
-                    jgk.Text = jg.ToString();
+                    kwkg.Text = Math.Round(kwk, 5).ToString();
+                    btubm.Text = Math.Round(bbm, 5).ToString();
+                    kcalkg.Text = Math.Round(kck, 5).ToString();
+                    jgk.Text = Math.Round(jg, 5).ToString();
                 }
             }
         }

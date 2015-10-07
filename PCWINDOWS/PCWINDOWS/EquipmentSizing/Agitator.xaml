@@ -92,7 +92,7 @@
                     </Grid>
                     <Grid Margin="5,20,5,0">
                         <Border BorderThickness="15" BorderBrush="#FFBFE1C3" CornerRadius="2">
-                            <Grid Background="#FFBFE1C3" >
+                            <Grid Background="#FFBFE1C3" Margin="-1,-1,-1,-1">
                                 <StackPanel Orientation="Vertical" Margin="5,5,5,5">
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="Time for 1 Turnover(sec)           :   " Foreground="Black"/>

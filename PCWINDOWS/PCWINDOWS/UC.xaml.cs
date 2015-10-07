@@ -61,7 +61,7 @@ namespace PCWINDOWS
                 }
                 else
                 {
-                    double m = int.Parse(length.Text);
+                    double m = double.Parse(length.Text);
                     double ce = m * 100;
                     double mm = m * 1000;
                     double km = m / 1000;
@@ -69,14 +69,14 @@ namespace PCWINDOWS
                     double ft = m * 3.280839895;
                     double yd = m * 1.093613298;
                     double mi = m * 0.000621371192;
-                    meters.Text = m.ToString();
-                    centi.Text = ce.ToString();
-                    kilo.Text = km.ToString();
-                    inch.Text = inc.ToString();
-                    milli.Text = mm.ToString();
-                    feet.Text = ft.ToString();
-                    ya.Text = yd.ToString();
-                    mile.Text = mi.ToString();
+                    meters.Text = Math.Round(m,5, MidpointRounding.AwayFromZero).ToString();
+                    centi.Text =Math.Round(ce, 5, MidpointRounding.AwayFromZero).ToString();
+                    kilo.Text = Math.Round(km,5, MidpointRounding.AwayFromZero).ToString();
+                    inch.Text = Math.Round(inc,5, MidpointRounding.AwayFromZero).ToString();
+                    milli.Text = Math.Round(mm,5, MidpointRounding.AwayFromZero).ToString();
+                    feet.Text = Math.Round(ft,5, MidpointRounding.AwayFromZero).ToString();
+                    ya.Text = Math.Round(yd,5, MidpointRounding.AwayFromZero).ToString();
+                    mile.Text = Math.Round(mi,5, MidpointRounding.AwayFromZero).ToString();
                 }
             }
 
@@ -88,7 +88,7 @@ namespace PCWINDOWS
                 }
                 else
                 {
-                    double ce = int.Parse(length.Text);
+                    double ce = double.Parse(length.Text);
                     double m = ce / 100;
                     double mm = m * 1000;
                     double km = m / 1000;
@@ -96,14 +96,14 @@ namespace PCWINDOWS
                     double ft = m * 3.280839895;
                     double yd = m * 1.093613298;
                     double mi = m * 0.000621371192;
-                    meters.Text = m.ToString();
-                    centi.Text = ce.ToString();
-                    kilo.Text = km.ToString();
-                    inch.Text = inc.ToString();
-                    milli.Text = mm.ToString();
-                    feet.Text = ft.ToString();
-                    ya.Text = yd.ToString();
-                    mile.Text = mi.ToString();
+                    meters.Text = Math.Round(m, 5, MidpointRounding.AwayFromZero).ToString();
+                    centi.Text = Math.Round(ce, 5, MidpointRounding.AwayFromZero).ToString();
+                    kilo.Text = Math.Round(km, 5, MidpointRounding.AwayFromZero).ToString();
+                    inch.Text = Math.Round(inc, 5, MidpointRounding.AwayFromZero).ToString();
+                    milli.Text = Math.Round(mm, 5, MidpointRounding.AwayFromZero).ToString();
+                    feet.Text = Math.Round(ft, 5, MidpointRounding.AwayFromZero).ToString();
+                    ya.Text = Math.Round(yd, 5, MidpointRounding.AwayFromZero).ToString();
+                    mile.Text = Math.Round(mi, 5, MidpointRounding.AwayFromZero).ToString();
                 }
             }
 
@@ -115,7 +115,7 @@ namespace PCWINDOWS
                 }
                 else
                 {
-                    double km = int.Parse(length.Text);
+                    double km = double.Parse(length.Text);
                     double m = km * 100;
                     double ce = m * 100;
                     double mm = m * 1000;
@@ -123,14 +123,14 @@ namespace PCWINDOWS
                     double ft = m * 3.280839895;
                     double yd = m * 1.093613298;
                     double mi = m * 0.000621371192;
-                    meters.Text = m.ToString();
-                    centi.Text = ce.ToString();
-                    kilo.Text = km.ToString();
-                    inch.Text = inc.ToString();
-                    milli.Text = mm.ToString();
-                    feet.Text = ft.ToString();
-                    ya.Text = yd.ToString();
-                    mile.Text = mi.ToString();
+                    meters.Text = Math.Round(m, 5, MidpointRounding.AwayFromZero).ToString();
+                    centi.Text = Math.Round(ce, 5, MidpointRounding.AwayFromZero).ToString();
+                    kilo.Text = Math.Round(km, 5, MidpointRounding.AwayFromZero).ToString();
+                    inch.Text = Math.Round(inc, 5, MidpointRounding.AwayFromZero).ToString();
+                    milli.Text = Math.Round(mm, 5, MidpointRounding.AwayFromZero).ToString();
+                    feet.Text = Math.Round(ft, 5, MidpointRounding.AwayFromZero).ToString();
+                    ya.Text = Math.Round(yd, 5, MidpointRounding.AwayFromZero).ToString();
+                    mile.Text = Math.Round(mi, 5, MidpointRounding.AwayFromZero).ToString();
                 }
             }
             if (lengthpicker.SelectedIndex == 4)
@@ -141,7 +141,7 @@ namespace PCWINDOWS
                 }
                 else
                 {
-                    double inc = int.Parse(length.Text);
+                    double inc = double.Parse(length.Text);
                     double m = inc / 39.37007874;
                     double km = m / 100;
                     double ce = m * 100;
@@ -149,14 +149,14 @@ namespace PCWINDOWS
                     double ft = m * 3.280839895;
                     double yd = m * 1.093613298;
                     double mi = m * 0.000621371192;
-                    meters.Text = m.ToString();
-                    centi.Text = ce.ToString();
-                    kilo.Text = km.ToString();
-                    inch.Text = inc.ToString();
-                    milli.Text = mm.ToString();
-                    feet.Text = ft.ToString();
-                    ya.Text = yd.ToString();
-                    mile.Text = mi.ToString();
+                    meters.Text = Math.Round(m, 5, MidpointRounding.AwayFromZero).ToString();
+                    centi.Text = Math.Round(ce, 5, MidpointRounding.AwayFromZero).ToString();
+                    kilo.Text = Math.Round(km, 5, MidpointRounding.AwayFromZero).ToString();
+                    inch.Text = Math.Round(inc, 5, MidpointRounding.AwayFromZero).ToString();
+                    milli.Text = Math.Round(mm, 5, MidpointRounding.AwayFromZero).ToString();
+                    feet.Text = Math.Round(ft, 5, MidpointRounding.AwayFromZero).ToString();
+                    ya.Text = Math.Round(yd, 5, MidpointRounding.AwayFromZero).ToString();
+                    mile.Text = Math.Round(mi, 5, MidpointRounding.AwayFromZero).ToString();
                 }
             }
 
@@ -168,7 +168,7 @@ namespace PCWINDOWS
                 }
                 else
                 {
-                    double mm = int.Parse(length.Text);
+                    double mm = double.Parse(length.Text);
                     double m = mm / 1000;
                     double inc = m * 39.37007874;
                     double km = m / 100;
@@ -176,14 +176,14 @@ namespace PCWINDOWS
                     double ft = m * 3.280839895;
                     double yd = m * 1.093613298;
                     double mi = m * 0.000621371192;
-                    meters.Text = m.ToString();
-                    centi.Text = ce.ToString();
-                    kilo.Text = km.ToString();
-                    inch.Text = inc.ToString();
-                    milli.Text = mm.ToString();
-                    feet.Text = ft.ToString();
-                    ya.Text = yd.ToString();
-                    mile.Text = mi.ToString();
+                    meters.Text = Math.Round(m, 5, MidpointRounding.AwayFromZero).ToString();
+                    centi.Text = Math.Round(ce, 5, MidpointRounding.AwayFromZero).ToString();
+                    kilo.Text = Math.Round(km, 5, MidpointRounding.AwayFromZero).ToString();
+                    inch.Text = Math.Round(inc, 5, MidpointRounding.AwayFromZero).ToString();
+                    milli.Text = Math.Round(mm, 5, MidpointRounding.AwayFromZero).ToString();
+                    feet.Text = Math.Round(ft, 5, MidpointRounding.AwayFromZero).ToString();
+                    ya.Text = Math.Round(yd, 5, MidpointRounding.AwayFromZero).ToString();
+                    mile.Text = Math.Round(mi, 5, MidpointRounding.AwayFromZero).ToString();
                 }
             }
 
@@ -195,7 +195,7 @@ namespace PCWINDOWS
                 }
                 else
                 {
-                    double ft = int.Parse(length.Text);
+                    double ft = double.Parse(length.Text);
                     double m = ft / 3.280839895;
                     double inc = m * 39.37007874;
                     double km = m / 100;
@@ -203,14 +203,14 @@ namespace PCWINDOWS
                     double mm = m * 1000;
                     double yd = m * 1.093613298;
                     double mi = m * 0.000621371192;
-                    meters.Text = m.ToString();
-                    centi.Text = ce.ToString();
-                    kilo.Text = km.ToString();
-                    inch.Text = inc.ToString();
-                    milli.Text = mm.ToString();
-                    feet.Text = ft.ToString();
-                    ya.Text = yd.ToString();
-                    mile.Text = mi.ToString();
+                    meters.Text = Math.Round(m, 5, MidpointRounding.AwayFromZero).ToString();
+                    centi.Text = Math.Round(ce, 5, MidpointRounding.AwayFromZero).ToString();
+                    kilo.Text = Math.Round(km, 5, MidpointRounding.AwayFromZero).ToString();
+                    inch.Text = Math.Round(inc, 5, MidpointRounding.AwayFromZero).ToString();
+                    milli.Text = Math.Round(mm, 5, MidpointRounding.AwayFromZero).ToString();
+                    feet.Text = Math.Round(ft, 5, MidpointRounding.AwayFromZero).ToString();
+                    ya.Text = Math.Round(yd, 5, MidpointRounding.AwayFromZero).ToString();
+                    mile.Text = Math.Round(mi, 5, MidpointRounding.AwayFromZero).ToString();
                 }
             }
 
@@ -222,7 +222,7 @@ namespace PCWINDOWS
                 }
                 else
                 {
-                    double yd = int.Parse(length.Text);
+                    double yd = double.Parse(length.Text);
                     double m = yd / 1.093613298;
                     double inc = m * 39.37007874;
                     double km = m / 100;
@@ -230,14 +230,14 @@ namespace PCWINDOWS
                     double mm = m * 1000;
                     double ft = m * 3.280839895;
                     double mi = m * 0.000621371192;
-                    meters.Text = m.ToString();
-                    centi.Text = ce.ToString();
-                    kilo.Text = km.ToString();
-                    inch.Text = inc.ToString();
-                    milli.Text = mm.ToString();
-                    feet.Text = ft.ToString();
-                    ya.Text = yd.ToString();
-                    mile.Text = mi.ToString();
+                    meters.Text = Math.Round(m, 5, MidpointRounding.AwayFromZero).ToString();
+                    centi.Text = Math.Round(ce, 5, MidpointRounding.AwayFromZero).ToString();
+                    kilo.Text = Math.Round(km, 5, MidpointRounding.AwayFromZero).ToString();
+                    inch.Text = Math.Round(inc, 5, MidpointRounding.AwayFromZero).ToString();
+                    milli.Text = Math.Round(mm, 5, MidpointRounding.AwayFromZero).ToString();
+                    feet.Text = Math.Round(ft, 5, MidpointRounding.AwayFromZero).ToString();
+                    ya.Text = Math.Round(yd, 5, MidpointRounding.AwayFromZero).ToString();
+                    mile.Text = Math.Round(mi, 5, MidpointRounding.AwayFromZero).ToString();
                 }
             }
 
@@ -249,7 +249,7 @@ namespace PCWINDOWS
                 }
                 else
                 {
-                    double mi = int.Parse(length.Text);
+                    double mi = double.Parse(length.Text);
                     double m = mi / 0.000621371192;
                     double inc = m * 39.37007874;
                     double km = m / 100;
@@ -257,14 +257,14 @@ namespace PCWINDOWS
                     double mm = m * 1000;
                     double ft = m * 3.280839895;
                     double yd = m * 1.093613298;
-                    meters.Text = m.ToString();
-                    centi.Text = ce.ToString();
-                    kilo.Text = km.ToString();
-                    inch.Text = inc.ToString();
-                    milli.Text = mm.ToString();
-                    feet.Text = ft.ToString();
-                    ya.Text = yd.ToString();
-                    mile.Text = mi.ToString();
+                    meters.Text = Math.Round(m, 5, MidpointRounding.AwayFromZero).ToString();
+                    centi.Text = Math.Round(ce, 5, MidpointRounding.AwayFromZero).ToString();
+                    kilo.Text = Math.Round(km, 5, MidpointRounding.AwayFromZero).ToString();
+                    inch.Text = Math.Round(inc, 5, MidpointRounding.AwayFromZero).ToString();
+                    milli.Text = Math.Round(mm, 5, MidpointRounding.AwayFromZero).ToString();
+                    feet.Text = Math.Round(ft, 5, MidpointRounding.AwayFromZero).ToString();
+                    ya.Text = Math.Round(yd, 5, MidpointRounding.AwayFromZero).ToString();
+                    mile.Text = Math.Round(mi, 5, MidpointRounding.AwayFromZero).ToString();
                 }
             }
         }

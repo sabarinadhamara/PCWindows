@@ -39,8 +39,8 @@ namespace PCWINDOWS.EquipmentSizing
             Pwr=pumppower(h,q,neta);
             outletp=h*1+InP*1;
 
-            outpress.Text = outletp.ToString();
-            motorpower.Text = Pwr.ToString();
+            outpress.Text = Math.Round(outletp,5).ToString();
+            motorpower.Text = Math.Round(Pwr,5).ToString();
         }
 
         private double pumppower(double h, double q, double neta)

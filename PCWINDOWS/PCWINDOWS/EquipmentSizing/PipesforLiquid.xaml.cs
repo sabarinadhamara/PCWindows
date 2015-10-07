@@ -72,7 +72,7 @@ namespace PCWINDOWS.EquipmentSizing
             kcv = 70 * qtycv;
             kwm = 10 * qtywm;
             ktotal = K45el + k90el + ktee + kcplngu + kdiav + kglv + kbfv + kcv + kwm;
-            K.Text = ktotal.ToString();
+            K.Text = Math.Round( ktotal,5, MidpointRounding.AwayFromZero).ToString();
 
             double  l, q, D, rho, h, mu, epsilon;
             l= double.Parse(straightpipel.Text);
@@ -125,8 +125,8 @@ namespace PCWINDOWS.EquipmentSizing
                 pdrop = pdrop1 + pdrop2 + pdrop3;
                 pdropbar = pdrop / 100;
 
-                pressdrop.Text = pdropbar.ToString();
-                velocity.Text = v.ToString();
+                pressdrop.Text = Math.Round(pdropbar,5, MidpointRounding.AwayFromZero).ToString();
+                velocity.Text = Math.Round(v,5, MidpointRounding.AwayFromZero).ToString();
 
 
         }

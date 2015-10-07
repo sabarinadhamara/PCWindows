@@ -38,8 +38,8 @@ namespace PCWINDOWS.EquipmentSizing
             area = flom3s / V;
             Dia = Math.Pow((area * 4 / 3.14), 0.5) * 1000;
             t = vol / Flo * 60;
-            timetodr.Text = t.ToString();
-            mindia.Text =Dia.ToString();
+            timetodr.Text = Math.Round(t,5, MidpointRounding.AwayFromZero).ToString();
+            mindia.Text =Math.Round(Dia,5, MidpointRounding.AwayFromZero).ToString();
         }
 
     }

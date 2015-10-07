@@ -38,7 +38,13 @@ namespace PCWINDOWS.EquipmentSizing
 
         private void calculate_Click(object sender, RoutedEventArgs e)
         {
-            Loaddata();
+            if (string.IsNullOrEmpty(inlet.Text) || string.IsNullOrEmpty(outlet.Text) || string.IsNullOrEmpty(dia.Text) || string.IsNullOrEmpty(length.Text) ||
+                string.IsNullOrEmpty(molewt.Text) || string.IsNullOrEmpty(temp.Text) || string.IsNullOrEmpty(viscosity.Text))
+            { MessageBox.Show("Enter values please"); }
+            else
+            {
+                Loaddata();
+            }
         }
 
         private void Loaddata()
@@ -111,8 +117,8 @@ namespace PCWINDOWS.EquipmentSizing
 
             }
 
-            flowrate.Text = Floweight.ToString();
-            velocity.Text = v.ToString();
+            flowrate.Text = Math.Round(Floweight,5 , MidpointRounding.AwayFromZero).ToString();
+            velocity.Text = Math.Round(v,5, MidpointRounding.AwayFromZero).ToString();
 
         }
 

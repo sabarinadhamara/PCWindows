@@ -49,12 +49,12 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double j = int.Parse(energy.Text);
+                    double j = double.Parse(energy.Text);
                     double cal = j * 0.239005736;
                     double b = j * 0.00094781712;
-                    joule.Text = j.ToString();
-                    calorie.Text = cal.ToString();
-                    btu.Text = b.ToString();
+                    joule.Text =Math.Round( j,5).ToString();
+                    calorie.Text = Math.Round(cal,5).ToString();
+                    btu.Text =Math.Round( b,5).ToString();
                 }
             }
 
@@ -66,12 +66,12 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double cal = int.Parse(energy.Text);
+                    double cal = double.Parse(energy.Text);
                     double j = cal / 0.239005736;
                     double b = j * 0.00094781712;
-                    joule.Text = j.ToString();
-                    calorie.Text = cal.ToString();
-                    btu.Text = b.ToString();
+                    joule.Text = Math.Round(j, 5).ToString();
+                    calorie.Text = Math.Round(cal, 5).ToString();
+                    btu.Text = Math.Round(b, 5).ToString();
                 }
             }
 
@@ -83,12 +83,12 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double b = int.Parse(energy.Text);
+                    double b = double.Parse(energy.Text);
                     double j = b / 0.00094781712;
                     double cal = j * 0.239005736;
-                    joule.Text = j.ToString();
-                    calorie.Text = cal.ToString();
-                    btu.Text = b.ToString();
+                    joule.Text = Math.Round(j, 5).ToString();
+                    calorie.Text = Math.Round(cal, 5).ToString();
+                    btu.Text = Math.Round(b, 5).ToString();
                 }
             }
         }

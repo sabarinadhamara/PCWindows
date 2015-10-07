@@ -87,7 +87,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>Bin\ARM\Release</OutputPath>
-    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;USE_WP8_NATIVE_SQLITE</DefineConstants>
     <NoStdLib>true</NoStdLib>
     <NoConfig>true</NoConfig>
     <ErrorReport>prompt</ErrorReport>
@@ -492,6 +492,7 @@
     <Content Include="arrow.png" />
     <Content Include="icon4.png" />
     <Content Include="Images\3sg.png" />
+    <Content Include="Images\back.png" />
     <Content Include="Images\cart_black.png" />
     <Content Include="Images\Lock.png" />
     <Content Include="Images\purchase.png" />

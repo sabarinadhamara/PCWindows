@@ -48,12 +48,12 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double m = int.Parse(velocity.Text);
+                    double m = double.Parse(velocity.Text);
                     double ft = m * 3.280839895;
                     double inc = m * 39.3700787;
-                    meter.Text = m.ToString();
-                    feet.Text = ft.ToString();
-                    inch.Text = inc.ToString();
+                    meter.Text = Math.Round(m,5).ToString();
+                    feet.Text = Math.Round(ft,5).ToString();
+                    inch.Text = Math.Round(inc,5).ToString();
                 }
             }
 
@@ -65,12 +65,12 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double ft = int.Parse(velocity.Text);
+                    double ft = double.Parse(velocity.Text);
                     double m = ft / 3.280839895;
                     double inc = m * 39.3700787;
-                    meter.Text = m.ToString();
-                    feet.Text = ft.ToString();
-                    inch.Text = inc.ToString();
+                    meter.Text = Math.Round(m, 5).ToString();
+                    feet.Text = Math.Round(ft, 5).ToString();
+                    inch.Text = Math.Round(inc, 5).ToString();
                 }
             }
 
@@ -82,12 +82,12 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double inc = int.Parse(velocity.Text);
+                    double inc = double.Parse(velocity.Text);
                     double m = inc / 39.3700787;
                     double ft = m * 3.280839895;
-                    meter.Text = m.ToString();
-                    feet.Text = ft.ToString();
-                    inch.Text = inc.ToString();
+                    meter.Text = Math.Round(m, 5).ToString();
+                    feet.Text = Math.Round(ft, 5).ToString();
+                    inch.Text = Math.Round(inc, 5).ToString();
                 }
             }
 

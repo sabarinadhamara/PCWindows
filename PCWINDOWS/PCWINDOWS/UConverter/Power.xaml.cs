@@ -53,16 +53,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double w = int.Parse(power.Text);
+                    double w = double.Parse(power.Text);
                     double hp = w * 0.001341022089595;
                     double calh = w * 860.42065;
                     double btuh = w * 3.41214163;
                     double r = w * 0.000284345136261;
-                    watt.Text = w.ToString();
-                    harse.Text = hp.ToString();
-                    cal.Text = calh.ToString();
-                    btu.Text = btuh.ToString();
-                    rt.Text = r.ToString();
+                    watt.Text = Math.Round(w,5).ToString();
+                    harse.Text = Math.Round(hp,5).ToString();
+                    cal.Text = Math.Round(calh,5).ToString();
+                    btu.Text = Math.Round(btuh,5).ToString();
+                    rt.Text = Math.Round(r,5).ToString();
                 }
             }
 
@@ -74,16 +74,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double hp = int.Parse(power.Text);
+                    double hp = double.Parse(power.Text);
                     double w = hp / 0.001341022089595;
                     double calh = w * 860.42065;
                     double btuh = w * 3.41214163;
                     double r = w * 0.000284345136261;
-                    watt.Text = w.ToString();
-                    harse.Text = hp.ToString();
-                    cal.Text = calh.ToString();
-                    btu.Text = btuh.ToString();
-                    rt.Text = r.ToString();
+                    watt.Text = Math.Round(w, 5).ToString();
+                    harse.Text = Math.Round(hp, 5).ToString();
+                    cal.Text = Math.Round(calh, 5).ToString();
+                    btu.Text = Math.Round(btuh, 5).ToString();
+                    rt.Text = Math.Round(r, 5).ToString();
                 }
             }
 
@@ -95,16 +95,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double calh = int.Parse(power.Text);
+                    double calh = double.Parse(power.Text);
                     double w = calh / 860.42065;
                     double hp = w * 0.001341022089595;
                     double btuh = w * 3.41214163;
                     double r = w * 0.000284345136261;
-                    watt.Text = w.ToString();
-                    harse.Text = hp.ToString();
-                    cal.Text = calh.ToString();
-                    btu.Text = btuh.ToString();
-                    rt.Text = r.ToString();
+                    watt.Text = Math.Round(w, 5).ToString();
+                    harse.Text = Math.Round(hp, 5).ToString();
+                    cal.Text = Math.Round(calh, 5).ToString();
+                    btu.Text = Math.Round(btuh, 5).ToString();
+                    rt.Text = Math.Round(r, 5).ToString();
                 }
             }
 
@@ -116,16 +116,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double btuh = int.Parse(power.Text);
+                    double btuh = double.Parse(power.Text);
                     double w = btuh / 3.41214163;
                     double hp = w * 0.001341022089595;
                     double calh = w * 860.42065;
                     double r = w * 0.000284345136261;
-                    watt.Text = w.ToString();
-                    harse.Text = hp.ToString();
-                    cal.Text = calh.ToString();
-                    btu.Text = btuh.ToString();
-                    rt.Text = r.ToString();
+                    watt.Text = Math.Round(w, 5).ToString();
+                    harse.Text = Math.Round(hp, 5).ToString();
+                    cal.Text = Math.Round(calh, 5).ToString();
+                    btu.Text = Math.Round(btuh, 5).ToString();
+                    rt.Text = Math.Round(r, 5).ToString();
                 }
             }
             if (powerpicker.SelectedIndex == 5)
@@ -136,16 +136,16 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double r = int.Parse(power.Text);
+                    double r = double.Parse(power.Text);
                     double w = r / 0.000284345136261;
                     double hp = w * 0.001341022089595;
                     double calh = w * 860.42065;
                     double btuh = w * 3.41214163;
-                    watt.Text = w.ToString();
-                    harse.Text = hp.ToString();
-                    cal.Text = calh.ToString();
-                    btu.Text = btuh.ToString();
-                    rt.Text = r.ToString();
+                    watt.Text = Math.Round(w, 5).ToString();
+                    harse.Text = Math.Round(hp, 5).ToString();
+                    cal.Text = Math.Round(calh, 5).ToString();
+                    btu.Text = Math.Round(btuh, 5).ToString();
+                    rt.Text = Math.Round(r, 5).ToString();
                 }
             }
         }

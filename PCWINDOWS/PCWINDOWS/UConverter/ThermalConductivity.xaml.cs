@@ -51,14 +51,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double cal = int.Parse(thermalconductivity.Text);
+                    double cal = double.Parse(thermalconductivity.Text);
                     double btu = cal * 241.75;
                     double wm = cal * 418.40;
                     double kc = cal * 360.00;
-                    calcm.Text = cal.ToString();
-                    btuft.Text = btu.ToString();
-                    wmk.Text = wm.ToString();
-                    kcal.Text = kc.ToString();
+                    calcm.Text = Math.Round(cal,5).ToString();
+                    btuft.Text = Math.Round(btu,5).ToString();
+                    wmk.Text = Math.Round(wm,5).ToString();
+                    kcal.Text = Math.Round(kc,5).ToString();
                 }
             }
 
@@ -70,14 +70,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double btu = int.Parse(thermalconductivity.Text);
+                    double btu = double.Parse(thermalconductivity.Text);
                     double cal = btu / 241.75;
                     double wm = cal * 418.40;
                     double kc = cal * 360.00;
-                    calcm.Text = cal.ToString();
-                    btuft.Text = btu.ToString();
-                    wmk.Text = wm.ToString();
-                    kcal.Text = kc.ToString();
+                    calcm.Text = Math.Round(cal, 5).ToString();
+                    btuft.Text = Math.Round(btu, 5).ToString();
+                    wmk.Text = Math.Round(wm, 5).ToString();
+                    kcal.Text = Math.Round(kc, 5).ToString();
                 }
             }
             if (thermalconductivitypicker.SelectedIndex == 3)
@@ -88,14 +88,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double wm = int.Parse(thermalconductivity.Text);
+                    double wm = double.Parse(thermalconductivity.Text);
                     double cal = wm / 418.40;
                     double btu = cal * 241.75;
                     double kc = cal * 360.00;
-                    calcm.Text = cal.ToString();
-                    btuft.Text = btu.ToString();
-                    wmk.Text = wm.ToString();
-                    kcal.Text = kc.ToString();
+                    calcm.Text = Math.Round(cal, 5).ToString();
+                    btuft.Text = Math.Round(btu, 5).ToString();
+                    wmk.Text = Math.Round(wm, 5).ToString();
+                    kcal.Text = Math.Round(kc, 5).ToString();
                 }
             }
             if (thermalconductivitypicker.SelectedIndex == 4)
@@ -106,14 +106,14 @@ namespace PCWINDOWS.UConverter
                 }
                 else
                 {
-                    double kc = int.Parse(thermalconductivity.Text);
+                    double kc = double.Parse(thermalconductivity.Text);
                     double cal = kc / 360.00;
                     double btu = cal * 241.75;
                     double wm = cal * 418.40;
-                    calcm.Text = cal.ToString();
-                    btuft.Text = btu.ToString();
-                    wmk.Text = wm.ToString();
-                    kcal.Text = kc.ToString();
+                    calcm.Text = Math.Round(cal, 5).ToString();
+                    btuft.Text = Math.Round(btu, 5).ToString();
+                    wmk.Text = Math.Round(wm, 5).ToString();
+                    kcal.Text = Math.Round(kc, 5).ToString();
                 }
             }
         }

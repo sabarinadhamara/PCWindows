@@ -40,8 +40,8 @@ namespace PCWINDOWS.EquipmentSizing
             power=fanpowercalc(qm3s,h,neta);
             outletp=h*1+InP*100000;
 
-             outpress.Text = outletp.ToString();
-            motorpower.Text = power.ToString();
+             outpress.Text = Math.Round(outletp,5, MidpointRounding.AwayFromZero).ToString();
+            motorpower.Text = Math.Round(power,5, MidpointRounding.AwayFromZero).ToString();
          }
 
          private double fanpowercalc(double qm3s, double h, double neta)

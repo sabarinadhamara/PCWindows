@@ -23,34 +23,42 @@
             <Grid Margin="0,60,0,0" Background="White" Tap="Grid_Tap">
                 <StackPanel>
 
-                    <toolkit:PhoneTextBox x:Name="velocity" Foreground="Black" Hint="Enter Value" InputScope="Number" AcceptsReturn="True" Background="White" />
-
-                    <Border  CornerRadius="10" Margin="150,10,20,0" Padding="2"  >
-                        <toolkit:ListPicker Name="velocitypicker" Foreground="Black" ExpansionMode="ExpansionAllowed"  SelectionChanged="Selection_Changed" Background="#F5F5F5" Margin="0,0,0,0"  />
+                    <Border  BorderThickness="1" BorderBrush="#E6E6E6" CornerRadius="5" Margin="20,10,20,0"   >
+                        <toolkit:PhoneTextBox x:Name="velocity"  Foreground="Black"  Hint="Enter Value" InputScope="Number" AcceptsReturn="True" Background="Transparent"  BorderThickness="0"/>
                     </Border>
+                    <Border  BorderThickness="5" BorderBrush="#E6E6E6" CornerRadius="5" Margin="150,30,20,0"   >
+                        <toolkit:ListPicker Name="velocitypicker"  Foreground="Black" ExpansionMode="FullScreenOnly"  SelectionChanged="Selection_Changed" Background="#E6E6E6" Margin="-1,-10,-1,-1" BorderBrush="#E6E6E6"  BorderThickness="0" />
+                    </Border>
+                    <Grid Margin="5,70,5,0" >
 
-                    <Grid Margin="5,70,5,0">
-                        <Border BorderThickness="15" BorderBrush="Pink" CornerRadius="2">
-                            <Grid Background="Pink" >
-                                <StackPanel Orientation="Vertical" Margin="5,5,5,5">
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="M/s           :    " Foreground="Black"/>
-                                        <TextBlock Name="meter" Foreground="Black"/>
+                        <StackPanel Orientation="Vertical" Margin="5,5,5,5" >
+                            <Border BorderThickness="15" BorderBrush="Pink" CornerRadius="2,2,0,0" Height="60">
+                                <Grid Background="Pink" Margin="-1,-1,-1,-1">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                        <TextBlock Text="M/s          :    " Foreground="Black" />
+                                        <TextBlock Name="meter" Foreground="Black" />
                                     </StackPanel>
-                                    <Line Stroke="White" StrokeThickness="1" X1="0" X2="430" Margin="0,5,0,0"/>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Ft/s           :    " Foreground="Black"/>
-                                        <TextBlock Name="feet" Foreground="Black"/>
+                                </Grid>
+                            </Border>
+                            <Border BorderThickness="15" BorderBrush="Pink" CornerRadius="0,0,0,0" Height="60" Margin="0,5,0,0">
+                                <Grid Background="Pink" Margin="-1,-1,-1,-1">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                        <TextBlock Text="Ft/s          :    " Foreground="Black" />
+                                        <TextBlock Name="feet" Foreground="Black" />
                                     </StackPanel>
-                                    <Line Stroke="White" StrokeThickness="1" X1="0" X2="430" Margin="0,5,0,0"/>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="In/s           :    " Foreground="Black"/>
-                                        <TextBlock Name="inch" Foreground="Black"/>
+                                </Grid>
+                            </Border>
+                            <Border BorderThickness="15" BorderBrush="Pink" CornerRadius="0,0,2,2" Height="60" Margin="0,5,0,0">
+                                <Grid Background="Pink" Margin="-1,-1,-1,-1">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                        <TextBlock Text="In/s          :    " Foreground="Black" />
+                                        <TextBlock Name="inch" Foreground="Black" />
                                     </StackPanel>
-                                </StackPanel>
-                            </Grid>
-                        </Border>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
                     </Grid>
+
                 </StackPanel>
             </Grid>
         </ScrollViewer>
